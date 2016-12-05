@@ -1,5 +1,5 @@
 @ECHO off
-TITLE Windows 10 Àu¤Æ¤u¨ã
+TITLE Windows 10 å„ªåŒ–å·¥å…·
 
 set TempFile_Name=%SystemRoot%\System32\BatTestUACin_SysRt%Random%.batemp
 ( echo "BAT Test UAC in Temp" >%TempFile_Name% ) 1>nul 2>nul
@@ -14,47 +14,50 @@ GOTO admin
 :menu
 CLS
 COLOR 0a
-MODE con: COLS=77 LINES=36
+MODE con: COLS=100 LINES=80
 
 ECHO.
-ECHO =============================================================================
-ECHO                        Windows 10 Àu¤Æ¤u¨ã                           
-ECHO    #+++++++++++++++++++++++++++++++++#++++++++++++++++++++++++++++++++++++#
-ECHO    # 01¡D¸T¥Î¯Á¤ÞªA°È                # 27¡DÃö³¬ HomeGroup ®a¥Î¸s²Õ        #
-ECHO    # 02¡D¸T¤îWindowsµo°e¿ù»~³ø§i     # 28¡D©µ¿ð±Ò°Ê Superfetch ªA°È       #
-ECHO    # 03¡D¸T¥Î"³Ìªñ¨Ï¥Îªº¶µ¥Ø"        # 29¡D³]©w§K¿é±K½X¦Û°Êµn¤J           #
-ECHO    # 04¡DÃö³¬Windows Defender        # 30¡DÃö³¬¶}¾÷µe­±¡]GUI¤Þ¾É¡^        #
-ECHO    # 05¡DÃö³¬¨¾¤õÀð                  # 31¡DÃö³¬ IPv6                      #
-ECHO    # 06¡DÀË¬d§ó·s¦Ó¤£¦Û°Ê¤U¸ü§ó·s    # 32¡DÃö³¬¤£»Ý­nªºµøÄ±¯S®Ä           #
-ECHO    # 07¡D±Ò°Ê¹q·½­p¹º¡u°ª®Ä¯à¡v      # 33¡DÃö³¬«È¤áÅéÅç§ïµ½­p¹º           #
-ECHO    # 08¡D½Õ¾ã¹q·½¿ï¶µ                # 34¡DÁôÂÃ­«­n°T®§¤¤¤ß¤u§@¦C¹Ï¥Ü     #
-ECHO    # 09¡D¸T¥Î¥ð¯v¡]§R°£¥ð¯vÀÉ®×¡^    # 35¡DÃö³¬¦Û°Ê¼½©ñ©Î¦Û°Ê¥´¶}ÀH¨­ºÐ   #
-ECHO    # 10¡D¶}±Ò§Ö³t±Ò°Ê                # 36¡D³]©wµøµ¡¶W¯¶Ãä®Ø               #
-ECHO    # 11¡D½Õ¾ã¥ð¯vÀÉ®×¤j¤p            # 37¡D¸ê·½¦^¦¬µ©¥kÁä©T©w¨ì¶}©l¿ï³æ   #
-ECHO    # 12¡DÂà²¾µêÀÀ°O¾ÐÅé              # 38¡D¤£¸g¥Ñ¸ê·½¦^¦¬µ©¡Aª½±µ§R°£ÀÉ®× #
-ECHO    # 13¡DÃö³¬¨t²Î«OÅ@                # 39¡DÃö³¬ SmartScreen ¿z¿ï¤u¨ã      #
-ECHO    # 14¡DÃö³¬¨Ï¥ÎªÌ±b¤á±±¨î(UAC)     # 40¡DÃö¾÷®É±j¨îÃö³¬­I´ºµ{¦¡¤£µ¥«Ý   #
-ECHO    # 30¡DWindows To Go±Ò¥ÎÀ³¥Î°Ó©±   # 41¡DÃö³¬¤£¥²­nªºµøÄ±°Êµe®ÄªG       #
-ECHO    # 16¡DÃö³¬­p¹º¥ô°ÈÁôÂÃªº¦Û°Ê±Ò°Ê  # 42¡DÃö³¬³nÅéJump List              #
-ECHO    # 17¡D²¾°£¥kÁä¿ï³æSky Drive Pro   # 43¡DÃö³¬»·ºÝ¨ó§U                   #
-ECHO    # 18¡D¸T¤î¹B¦æ¹q¸£¦Û°ÊºûÅ@­p¹º    # 44¡D§ó§ïIE¹w³]¤U¸ü¦ì¸m             #
-ECHO    # 19¡D±Ò¥Î.NET Framework 3.5.1    # 45¡D²M²zÀ³¥Î°Ó©±§Ö¨ú               #
-ECHO    # 20¡DÃö³¬³nÅé¬Û®e©Ê¤pÀ°¤â        # 46¡D¤u§@¦CÅã¥Ü¡u¬P´Á´X¡v           #
-ECHO    # 21¡D¸T¤î¤@¤Wºô´N¥´¶}ÂsÄý¾¹      # 47¡D³]©w¨t²Î¤º«ØºI¹ÏÀx¦s¨ì®à­±     #
-ECHO    # 22¡D§R°£6­Ó¸ê®Æ§¨(¼È¥¢®Ä)       # 48¡DÃö³¬ºÏºÐ¸H¤ù¾ã²z­p¹º           #
-ECHO    # 23¡DÅã¥Ü¨ü«OÅ@ªº¨t²ÎÀÉ®×        # 49¡D¸T¥Î¨t²Î°O¿ýÀÉ»P¼g¤J°»¿ù¸ê°T   #
-ECHO    # 24¡D®à­±Åã¥Ü¡u§Úªº¹q¸£¡v        # 50¡D¸T¥ÎºÃÃø±Æ¸Ñ©M¨t²Î¶EÂ_ªA°È     #
-ECHO    # 25¡D±Ò°ÊIE¼W±j«OÅ@¼Ò¦¡          # 51¡D¨t²Î©U§£²M²z                   #
-ECHO    # 26¡D±NÁ{®É¸ê®Æ§¨²¾°Ê¨ì«D¨t²ÎºÐ  # 52. ºô¸ô¤u¨ã                       #
-ECHO    # w8¡D¶i¤JWIN8Àu¤Æ¤u¨ã          #------------------------------------#
-ECHO =================================­·«B¦Û»s=====================================
+ECHO ===============================================================================
+ECHO                               Windows 10 å„ªåŒ–èˆ‡å°å·¥å…·                           
+ECHO   ##############################################################################
+ECHO   #++++++++++++++++++++++++++++++â—‹æŽ¨è–¦ â—å°å¿ƒä½¿ç”¨+++++++++++++++++++++++++++++#
+ECHO   + â— 01ï¼Žç¦ç”¨ç´¢å¼•æœå‹™                â—‹ 27ï¼Žé—œé–‰ HomeGroup å®¶ç”¨ç¾¤çµ„          +
+ECHO   + â— 02ï¼Žç¦æ­¢Windowsç™¼é€éŒ¯èª¤å ±å‘Š     â—‹ 28ï¼Žå»¶é²å•Ÿå‹• Superfetch æœå‹™         +
+ECHO   + â—‹ 03ï¼Žç¦ç”¨"æœ€è¿‘ä½¿ç”¨çš„é …ç›®"        â— 29ï¼Žè¨­å®šå…è¼¸å¯†ç¢¼è‡ªå‹•ç™»å…¥             +
+ECHO   + â— 04ï¼Žé—œé–‰Windows Defender        â—‹ 30ï¼Žé—œé–‰é–‹æ©Ÿç•«é¢ï¼ˆGUIå¼•å°Žï¼‰          +
+ECHO   +    05ï¼Žé‡æ–°è£½ä½œä¸­                  â— 31ï¼Žé—œé–‰ IPv6                        +
+ECHO   + â— 06ï¼Žæª¢æŸ¥æ›´æ–°è€Œä¸è‡ªå‹•ä¸‹è¼‰æ›´æ–°    â—‹ 32ï¼Žé—œé–‰ä¸éœ€è¦çš„è¦–è¦ºç‰¹æ•ˆ             +
+ECHO   + â—‹ 07ï¼Žå•Ÿå‹•é›»æºè¨ˆåŠƒã€Œé«˜æ•ˆèƒ½ã€      â—‹ 33ï¼Žé—œé–‰å®¢æˆ¶é«”é©—æ”¹å–„è¨ˆåŠƒ             +
+ECHO   + â—‹ 08ï¼Žèª¿æ•´é›»æºé¸é …                â—‹ 34ï¼Žéš±è—é‡è¦è¨Šæ¯ä¸­å¿ƒå·¥ä½œåˆ—åœ–ç¤º       +
+ECHO   + â— 09ï¼Žç¦ç”¨ä¼‘çœ ï¼ˆåˆªé™¤ä¼‘çœ æª”æ¡ˆï¼‰    â—‹ 35ï¼Žé—œé–‰è‡ªå‹•æ’­æ”¾æˆ–è‡ªå‹•æ‰“é–‹éš¨èº«ç¢Ÿ     +
+ECHO   + â—‹ 10ï¼Žé–‹å•Ÿå¿«é€Ÿå•Ÿå‹•                â—‹ 36ï¼Žè¨­å®šè¦–çª—è¶…çª„é‚Šæ¡†                 +
+ECHO   + â—‹ 11ï¼Žèª¿æ•´ä¼‘çœ æª”æ¡ˆå¤§å°            â—‹ 37ï¼Žè³‡æºå›žæ”¶ç­’å³éµå›ºå®šåˆ°é–‹å§‹é¸å–®     +
+ECHO   + â—‹ 12ï¼Žè½‰ç§»è™›æ“¬è¨˜æ†¶é«”              â— 38ï¼Žä¸ç¶“ç”±è³‡æºå›žæ”¶ç­’ï¼Œç›´æŽ¥åˆªé™¤æª”æ¡ˆ   +
+ECHO   + â— 13ï¼Žé—œé–‰ç³»çµ±ä¿è­·                â— 39ï¼Žé—œé–‰ SmartScreen ç¯©é¸å·¥å…·        +
+ECHO   +    14ï¼Žé‡æ–°è£½ä½œä¸­                  â—‹ 40ï¼Žé—œæ©Ÿæ™‚å¼·åˆ¶é—œé–‰èƒŒæ™¯ç¨‹å¼ä¸ç­‰å¾…     +
+ECHO   + â—‹ 15ï¼ŽWindows To Goå•Ÿç”¨æ‡‰ç”¨å•†åº—   â—‹ 41ï¼Žé—œé–‰ä¸å¿…è¦çš„è¦–è¦ºå‹•ç•«æ•ˆæžœ         +
+ECHO   + â—‹ 16ï¼Žé—œé–‰è¨ˆåŠƒä»»å‹™éš±è—çš„è‡ªå‹•å•Ÿå‹•  â— 42ï¼Žé—œé–‰è»Ÿé«”Jump List                +
+ECHO   + â—‹ 17ï¼Žç§»é™¤å³éµé¸å–®Sky Drive Pro   â—‹ 43ï¼Žé—œé–‰é ç«¯å”åŠ©                     +
+ECHO   + â— 18ï¼Žç¦æ­¢é‹è¡Œé›»è…¦è‡ªå‹•ç¶­è­·è¨ˆåŠƒ    â—‹ 44ï¼Žæ›´æ”¹IEé è¨­ä¸‹è¼‰ä½ç½®               +
+ECHO   + â—‹ 19ï¼Žå•Ÿç”¨.NET Framework 3.5.1    â—‹ 45ï¼Žæ¸…ç†æ‡‰ç”¨å•†åº—å¿«å–                 +
+ECHO   + â— 20ï¼Žé—œé–‰è»Ÿé«”ç›¸å®¹æ€§å°å¹«æ‰‹        â—‹ 46ï¼Žå·¥ä½œåˆ—é¡¯ç¤ºã€Œæ˜ŸæœŸå¹¾ã€             +
+ECHO   + â—‹ 21ï¼Žç¦æ­¢ä¸€ä¸Šç¶²å°±æ‰“é–‹ç€è¦½å™¨      â—‹ 47ï¼Žè¨­å®šç³»çµ±å…§å»ºæˆªåœ–å„²å­˜åˆ°æ¡Œé¢       +
+ECHO   + â— 22ï¼Žåˆªé™¤6å€‹è³‡æ–™å¤¾(æš«å¤±æ•ˆ)       â— 48ï¼Žé—œé–‰ç£ç¢Ÿç¢Žç‰‡æ•´ç†è¨ˆåŠƒ             +
+ECHO   + â—‹ 23ï¼Žé¡¯ç¤ºå—ä¿è­·çš„ç³»çµ±æª”æ¡ˆ        â—‹ 49ï¼Žç¦ç”¨ç³»çµ±è¨˜éŒ„æª”èˆ‡å¯«å…¥åµéŒ¯è³‡è¨Š     +
+ECHO   + â—‹ 24ï¼Žæ¡Œé¢é¡¯ç¤ºã€Œæˆ‘çš„é›»è…¦ã€        â—‹ 50ï¼Žç¦ç”¨ç–‘é›£æŽ’è§£å’Œç³»çµ±è¨ºæ–·æœå‹™       +
+ECHO   + â— 25ï¼Žå•Ÿå‹•IEå¢žå¼·ä¿è­·æ¨¡å¼          â—‹ 51ï¼Žç³»çµ±åžƒåœ¾æ¸…ç†                     +
+ECHO   + â—‹ 26ï¼Žå°‡è‡¨æ™‚è³‡æ–™å¤¾ç§»å‹•åˆ°éžç³»çµ±ç¢Ÿ  â—‹ 52. ç¶²è·¯å·¥å…·                         +
+ECHO   + â— w8ï¼Žé€²å…¥WIN8å„ªåŒ–å·¥å…·(è«‹ç­‰å¾…ä¸‹æ¬¡æ›´æ–° )                                   + 
+ECHO   #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+ECHO   ##############################################################################
+ECHO =================================é¢¨é›¨è‡ªè£½=======================================
 
-set /p a=.                  ½Ð¿é¤J¾Þ§@½s¸¹¨Ã«ö¤UEnter¡]¨Ò¦p07¡^¡G
+set /p a=.                  è«‹è¼¸å…¥æ“ä½œç·¨è™Ÿä¸¦æŒ‰ä¸‹Enterï¼ˆä¾‹å¦‚07ï¼‰ï¼š
 if %a%==01 goto wsearch
 if %a%==02 goto report
 if %a%==03 goto history
 if %a%==04 goto Defender
-if %a%==05 goto firewall
+if %a%==05 goto 
 if %a%==06 goto update
 if %a%==07 goto HP
 if %a%==08 goto powerGUID
@@ -63,8 +66,8 @@ if %a%==10 goto Hybrid
 if %a%==11 goto hiberfil
 if %a%==12 goto pagefile
 if %a%==13 goto restore
-if %a%==14 goto UAC
-if %a%==30 goto store
+if %a%==14 goto 
+if %a%==15 goto store
 if %a%==16 goto plan
 if %a%==17 goto SkyDrive
 if %a%==18 goto SD
@@ -115,27 +118,27 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO              ¸T¥Î¯Á¤ÞªA°È
+ECHO              ç¦ç”¨ç´¢å¼•æœå‹™
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto wsearch1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto wsearch2
 
 :wsearch1
 sc stop WMPNetworkSvc
-echo «ö¤U¥ô·NÁäÄ~Äò¾Þ§@
+echo æŒ‰ä¸‹ä»»æ„éµç¹¼çºŒæ“ä½œ
 pause>nul
 sc stop wsearch
 sc config WMPNetworkSvc start= disabled
 sc config wsearch start= disabled
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -144,7 +147,7 @@ sc config wsearch start= auto
 sc config WMPNetworkSvc start= delayed-auto
 sc start wsearch
 sc start WMPNetworkSvc
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -156,16 +159,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         ¸T¤îWindowsµo°e¿ù»~³ø§i
+ECHO         ç¦æ­¢Windowsç™¼é€éŒ¯èª¤å ±å‘Š
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto report1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto report2
 
@@ -175,7 +178,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\PCHealth\ErrorReporting"
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -185,7 +188,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\PCHealth" /f
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -197,16 +200,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          ¸T¥Î"³Ìªñ¨Ï¥Îªº¶µ¥Ø"
+ECHO          ç¦ç”¨"æœ€è¿‘ä½¿ç”¨çš„é …ç›®"
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto history1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto history2
 
@@ -223,7 +226,7 @@ reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer" /v "Dis
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -239,7 +242,7 @@ reg delete "HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -251,16 +254,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          Ãö³¬Windows Defender
+ECHO          é—œé–‰Windows Defender
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto Defender1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto Defender2
 
@@ -269,7 +272,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" /v "Di
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -279,58 +282,12 @@ gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
 sc start WinDefend
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 
-:firewall
-CLS
-MODE con: COLS=40 LINES=30
-ECHO.
-ECHO.
-ECHO    **********************************
-ECHO.
-ECHO           Ãö³¬Windows¨¾¤õÀð
-ECHO.
-ECHO                1¡D°õ¦æ
-ECHO.
-ECHO                2¡DÁÙ­ì
-ECHO.
-ECHO    **********************************
-ECHO.
-ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
-If ErrorLevel 1 If Not ErrorLevel 2 Goto firewall1
-If ErrorLevel 2 If Not ErrorLevel 3 Goto firewall2
 
-:firewall1
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile" /v "EnableFirewall" /d 0 /t REG_DWORD /f
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile" /v "EnableFirewall" /d 0 /t REG_DWORD /f
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile" /v "EnableFirewall" /d 0 /t REG_DWORD /f
-gpupdate /force
-taskkill /f /im explorer.exe
-start %systemroot%\explorer
-echo.
-echo «ö¤U1ª½±µªð¦^¥D¿ï³æ¡A«ö¤U2Ä~Äò°±¤î¨¾¤õÀðªA°È
-echo.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
-If ErrorLevel 1 If Not ErrorLevel 2 Goto menu
-If ErrorLevel 2 If Not ErrorLevel 3 sc stop MpsSvc & sc config MpsSvc start=disabled & Goto menu
-
-
-:firewall2
-sc config MpsSvc start=auto
-sc start MpsSvc
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile" /v "EnableFirewall" /f
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PrivateProfile" /v "EnableFirewall" /f
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile" /v "EnableFirewall" /f
-gpupdate /force
-taskkill /f /im explorer.exe
-start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
-pause>nul
-GOTO menu
 
 
 :update
@@ -340,16 +297,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         ÀË¬d§ó·s¦Ó¤£¦Û°Ê¤U¸ü§ó·s
+ECHO         æª¢æŸ¥æ›´æ–°è€Œä¸è‡ªå‹•ä¸‹è¼‰æ›´æ–°
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto update1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto update2
 
@@ -361,7 +318,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -370,7 +327,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -382,25 +339,25 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          ±Ò°Ê¹q·½­p¹º¡u°ª®Ä¯à¡v
+ECHO          å•Ÿå‹•é›»æºè¨ˆåŠƒã€Œé«˜æ•ˆèƒ½ã€
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto HP1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto HP2
 
 :HP1
 powercfg.exe -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 If ErrorLevel 1 If Not ErrorLevel 2 Goto error
-ECHO ¦¨¥\¤Á´«¨ì¹q·½­p¹º¡u°ª®Ä¯à¡v¡C
+ECHO æˆåŠŸåˆ‡æ›åˆ°é›»æºè¨ˆåŠƒã€Œé«˜æ•ˆèƒ½ã€ã€‚
 ECHO.
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -411,18 +368,18 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO            ½Ð¿ï¾Ü¹q·½­p¹º
+ECHO            è«‹é¸æ“‡é›»æºè¨ˆåŠƒ
 ECHO.
-ECHO             1¡D¥­¿Å(±ÀÂË)
+ECHO             1ï¼Žå¹³è¡¡(æŽ¨è–¦)
 ECHO.
-ECHO             2¡D¸`¯à
+ECHO             2ï¼Žç¯€èƒ½
 ECHO.                
-ECHO             3¡D°ª®Ä¯à
+ECHO             3ï¼Žé«˜æ•ˆèƒ½
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 123 /N /M ¿ï¾Ü¡]1¡B2¡B3¡^¡G
+Choice /C 123 /N /M é¸æ“‡ï¼ˆ1ã€2ã€3ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto PP1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto PP2
 If ErrorLevel 3 If Not ErrorLevel 4 Goto PP3
@@ -430,27 +387,27 @@ If ErrorLevel 3 If Not ErrorLevel 4 Goto PP3
 :PP1
 powercfg.exe -setactive 381b4222-f694-41f0-9685-ff5bb260df2e
 If ErrorLevel 1 If Not ErrorLevel 2 Goto error
-ECHO ¦¨¥\¤Á´«¨ì¹q·½­p¹º¡u¥­¿Å¡v¡C
+ECHO æˆåŠŸåˆ‡æ›åˆ°é›»æºè¨ˆåŠƒã€Œå¹³è¡¡ã€ã€‚
 ECHO.
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :PP2
 powercfg.exe -setactive a1841308-3541-4fab-bc81-f73056f20b4a
 If ErrorLevel 1 If Not ErrorLevel 2 Goto error
-ECHO ¦¨¥\¤Á´«¨ì¹q·½­p¹º¡u¸`¯à¡v¡C
+ECHO æˆåŠŸåˆ‡æ›åˆ°é›»æºè¨ˆåŠƒã€Œç¯€èƒ½ã€ã€‚
 ECHO.
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :PP3
 powercfg.exe -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 If ErrorLevel 1 If Not ErrorLevel 2 Goto error
-ECHO ¦¨¥\¤Á´«¨ì¹q·½­p¹º¡u°ª®Ä¯à¡v¡C
+ECHO æˆåŠŸåˆ‡æ›åˆ°é›»æºè¨ˆåŠƒã€Œé«˜æ•ˆèƒ½ã€ã€‚
 ECHO.
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -459,7 +416,7 @@ GOTO menu
 CLS
 MODE con: COLS=70 LINES=10
 powercfg /l
-set /p SCHEME_GUID=½Ð¿é¤J»Ý­n½Õ¾ãªº¹q·½¤è®×GUID:
+set /p SCHEME_GUID=è«‹è¼¸å…¥éœ€è¦èª¿æ•´çš„é›»æºæ–¹æ¡ˆGUID:
 goto power
 
 
@@ -471,22 +428,22 @@ ECHO.
 ECHO.
 ECHO    *************************************************
 ECHO.
-ECHO                      ½Õ¾ã¹q·½¿ï¶µ
+ECHO                      èª¿æ•´é›»æºé¸é …
 ECHO.
-ECHO       1¡D«ö¤U¹q·½«ö¶s®É     6¡D½Õ¾ã¿Ã¹õ«G«×
+ECHO       1ï¼ŽæŒ‰ä¸‹é›»æºæŒ‰éˆ•æ™‚     6ï¼Žèª¿æ•´èž¢å¹•äº®åº¦
 ECHO.
-ECHO       2¡D«ö¤UºÎ¯v«ö¶s®É     7¡D³ê¿ô®É»Ý­n±K½X
+ECHO       2ï¼ŽæŒ‰ä¸‹ç¡çœ æŒ‰éˆ•æ™‚     7ï¼Žå–šé†’æ™‚éœ€è¦å¯†ç¢¼
 ECHO.
-ECHO       3¡DÃö³¬µ§¹q¤W»\®É     8¡D¦b¦¹®É¶¡«áÃö³¬µwºÐ
+ECHO       3ï¼Žé—œé–‰ç­†é›»ä¸Šè“‹æ™‚     8ï¼Žåœ¨æ­¤æ™‚é–“å¾Œé—œé–‰ç¡¬ç¢Ÿ
 ECHO.
-ECHO       4¡DÃö³¬¿Ã¹õ®É¶¡       9¡D²V¦XºÎ¯v
+ECHO       4ï¼Žé—œé–‰èž¢å¹•æ™‚é–“       9ï¼Žæ··åˆç¡çœ 
 ECHO.
-ECHO       5¡D¶i¤JºÎ¯vª¬ºA®É¶¡   0¡D¦b¦¹®É¶¡«á¥ð¯v
+ECHO       5ï¼Žé€²å…¥ç¡çœ ç‹€æ…‹æ™‚é–“   0ï¼Žåœ¨æ­¤æ™‚é–“å¾Œä¼‘çœ 
 ECHO.
 ECHO    *************************************************
 ECHO.
 ECHO.
-Choice /C 0123456789 /N /M ¿ï¾Ü¡]1¡B2¡B3¡B4¡B5¡B6¡B7¡B8¡B9¡B0¡^¡G
+Choice /C 0123456789 /N /M é¸æ“‡ï¼ˆ1ã€2ã€3ã€4ã€5ã€6ã€7ã€8ã€9ã€0ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto power0
 If ErrorLevel 2 If Not ErrorLevel 3 Goto power1
 If ErrorLevel 3 If Not ErrorLevel 4 Goto power2
@@ -506,20 +463,20 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO               «ö¤U¹q·½«ö¶s®É
+ECHO               æŒ‰ä¸‹é›»æºæŒ‰éˆ•æ™‚
 ECHO.
-ECHO             1¡D¤£±Ä¨ú¥ô¦ó¾Þ§@
+ECHO             1ï¼Žä¸æŽ¡å–ä»»ä½•æ“ä½œ
 ECHO.
-ECHO             2¡DºÎ¯v
+ECHO             2ï¼Žç¡çœ 
 ECHO.                
-ECHO             3¡D¥ð¯v
+ECHO             3ï¼Žä¼‘çœ 
 ECHO.
-ECHO             4¡DÃö¾÷
+ECHO             4ï¼Žé—œæ©Ÿ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 1234 /N /M ¿ï¾Ü¡]1¡B2¡B3¡B4¡^¡G
+Choice /C 1234 /N /M é¸æ“‡ï¼ˆ1ã€2ã€3ã€4ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 GOTO POWERBUTTON1
 If ErrorLevel 2 If Not ErrorLevel 3 GOTO POWERBUTTON2
 If ErrorLevel 3 If Not ErrorLevel 4 GOTO POWERBUTTON3
@@ -535,7 +492,7 @@ If ErrorLevel 1 If Not ErrorLevel 2 goto error
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -549,7 +506,7 @@ If ErrorLevel 1 If Not ErrorLevel 2 goto error
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 powercfg.exe -setactive %SCHEME_GUID%
 goto power
@@ -564,7 +521,7 @@ If ErrorLevel 1 If Not ErrorLevel 2 goto error
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -578,7 +535,7 @@ If ErrorLevel 1 If Not ErrorLevel 2 goto error
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -590,18 +547,18 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO               «ö¤UºÎ¯v«ö¶s®É
+ECHO               æŒ‰ä¸‹ç¡çœ æŒ‰éˆ•æ™‚
 ECHO.
-ECHO             1¡D¤£±Ä¨ú¥ô¦ó¾Þ§@
+ECHO             1ï¼Žä¸æŽ¡å–ä»»ä½•æ“ä½œ
 ECHO.
-ECHO             2¡DºÎ¯v
+ECHO             2ï¼Žç¡çœ 
 ECHO.                
-ECHO             3¡D¥ð¯v
+ECHO             3ï¼Žä¼‘çœ 
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 123 /N /M ¿ï¾Ü¡]1¡B2¡B3¡^¡G
+Choice /C 123 /N /M é¸æ“‡ï¼ˆ1ã€2ã€3ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 goto sleepbutton1
 If ErrorLevel 2 If Not ErrorLevel 3 goto sleepbutton2
 If ErrorLevel 3 If Not ErrorLevel 4 goto sleepbutton3
@@ -617,7 +574,7 @@ If ErrorLevel 1 If Not ErrorLevel 2 goto error
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -631,7 +588,7 @@ If ErrorLevel 1 If Not ErrorLevel 2 goto error
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -645,7 +602,7 @@ If ErrorLevel 1 If Not ErrorLevel 2 goto error
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -657,20 +614,20 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO                Ãö³¬µ§¹q¤W»\®É
+ECHO                é—œé–‰ç­†é›»ä¸Šè“‹æ™‚
 ECHO.
-ECHO             1¡D¤£±Ä¨ú¥ô¦ó¾Þ§@
+ECHO             1ï¼Žä¸æŽ¡å–ä»»ä½•æ“ä½œ
 ECHO.
-ECHO             2¡DºÎ¯v
+ECHO             2ï¼Žç¡çœ 
 ECHO.                
-ECHO             3¡D¥ð¯v
+ECHO             3ï¼Žä¼‘çœ 
 ECHO.
-ECHO             4¡DÃö¾÷
+ECHO             4ï¼Žé—œæ©Ÿ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 1234 /N /M ¿ï¾Ü¡]1¡B2¡B3¡B4¡^¡G
+Choice /C 1234 /N /M é¸æ“‡ï¼ˆ1ã€2ã€3ã€4ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 goto cover1
 If ErrorLevel 2 If Not ErrorLevel 3 goto cover2
 If ErrorLevel 3 If Not ErrorLevel 4 goto cover3
@@ -686,7 +643,7 @@ If ErrorLevel 1 If Not ErrorLevel 2 goto error
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -700,7 +657,7 @@ If ErrorLevel 1 If Not ErrorLevel 2 goto error
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -714,7 +671,7 @@ If ErrorLevel 1 If Not ErrorLevel 2 goto error
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -728,7 +685,7 @@ If ErrorLevel 1 If Not ErrorLevel 2 goto error
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -737,13 +694,13 @@ goto power
 if /i "%SCHEME_GUID%"=="a1841308-3541-4fab-bc81-f73056f20b4a" (powercfg.exe -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c) else powercfg.exe -setactive a1841308-3541-4fab-bc81-f73056f20b4a
 CLS
 MODE con: COLS=60 LINES=5
-set /p S1=½Ð¿é¤JÃö³¬¿Ã¹õ«eµ¥«Ý®É¶¡(¬í,0ªí¥Ü±`«G)¡G
+set /p S1=è«‹è¼¸å…¥é—œé–‰èž¢å¹•å‰ç­‰å¾…æ™‚é–“(ç§’,0è¡¨ç¤ºå¸¸äº®)ï¼š
 powercfg -setacvalueindex %SCHEME_GUID% 7516b95f-f776-4464-8c53-06167f40cc99 3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e %S1%
 powercfg -setdcvalueindex %SCHEME_GUID% 7516b95f-f776-4464-8c53-06167f40cc99 3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e %S1%
 If ErrorLevel 1 If Not ErrorLevel 2 goto error
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -751,14 +708,14 @@ goto power
 :power5
 CLS
 MODE con: COLS=65 LINES=5
-set /p S2=½Ð¿é¤J¹q¸£¶i¤JºÎ¯vª¬ºA«eµ¥«Ý®É¶¡(¬í,¿é¤J0¤£ºÎ¯v)¡G
+set /p S2=è«‹è¼¸å…¥é›»è…¦é€²å…¥ç¡çœ ç‹€æ…‹å‰ç­‰å¾…æ™‚é–“(ç§’,è¼¸å…¥0ä¸ç¡çœ )ï¼š
 if /i "%SCHEME_GUID%"=="a1841308-3541-4fab-bc81-f73056f20b4a" (powercfg.exe -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c) else powercfg.exe -setactive a1841308-3541-4fab-bc81-f73056f20b4a
 powercfg -setacvalueindex %SCHEME_GUID% 238c9fa8-0aad-41ed-83f4-97be242c8f20 29f6c1db-86da-48c5-9fdb-f2b67b1f44da %S2%
 powercfg -setdcvalueindex %SCHEME_GUID% 238c9fa8-0aad-41ed-83f4-97be242c8f20 29f6c1db-86da-48c5-9fdb-f2b67b1f44da %S2%
 If ErrorLevel 1 If Not ErrorLevel 2 goto error
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -766,14 +723,14 @@ goto power
 :power6
 CLS
 MODE con: COLS=40 LINES=5
-set /p S3=½Ð¿é¤J¿Ã¹õ«G«×­È(%,0-100)¡G
+set /p S3=è«‹è¼¸å…¥èž¢å¹•äº®åº¦å€¼(%,0-100)ï¼š
 if /i "%SCHEME_GUID%"=="a1841308-3541-4fab-bc81-f73056f20b4a" (powercfg.exe -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c) else powercfg.exe -setactive a1841308-3541-4fab-bc81-f73056f20b4a
 powercfg -setacvalueindex %SCHEME_GUID% 7516b95f-f776-4464-8c53-06167f40cc99 aded5e82-b909-4619-9949-f5d71dac0bcb %S3%
 powercfg -setdcvalueindex %SCHEME_GUID% 7516b95f-f776-4464-8c53-06167f40cc99 aded5e82-b909-4619-9949-f5d71dac0bcb %S3%
 If ErrorLevel 1 If Not ErrorLevel 2 goto error
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -785,16 +742,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO             ³ê¿ô®É»Ý­n±K½X
+ECHO             å–šé†’æ™‚éœ€è¦å¯†ç¢¼
 ECHO.
-ECHO                1¡D±Ò¥Î
+ECHO                1ï¼Žå•Ÿç”¨
 ECHO.
-ECHO                2¡D¸T¥Î
+ECHO                2ï¼Žç¦ç”¨
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 goto awakepsw1
 If ErrorLevel 2 If Not ErrorLevel 3 goto awakepsw2
 
@@ -805,7 +762,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e79
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -816,7 +773,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e79
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -825,13 +782,13 @@ goto power
 if /i "%SCHEME_GUID%"=="a1841308-3541-4fab-bc81-f73056f20b4a" (powercfg.exe -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c) else powercfg.exe -setactive a1841308-3541-4fab-bc81-f73056f20b4a
 CLS
 MODE con: COLS=50 LINES=5
-set /p S4=½Ð¿é¤JÃö³¬µwºÐ«eµ¥«Ý®É¶¡(¬í,0ªí¥Ü¤£Ãö³¬)¡G
+set /p S4=è«‹è¼¸å…¥é—œé–‰ç¡¬ç¢Ÿå‰ç­‰å¾…æ™‚é–“(ç§’,0è¡¨ç¤ºä¸é—œé–‰)ï¼š
 powercfg /setacvalueindex %SCHEME_GUID% 0012ee47-9041-4b5d-9b77-535fba8b1442 6738e2c4-e8a5-4a42-b16a-e040e769756e %S4%
 powercfg /setdcvalueindex %SCHEME_GUID% 0012ee47-9041-4b5d-9b77-535fba8b1442 6738e2c4-e8a5-4a42-b16a-e040e769756e %S4%
 If ErrorLevel 1 If Not ErrorLevel 2 goto error
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -843,16 +800,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO               ²V¦XºÎ¯v
+ECHO               æ··åˆç¡çœ 
 ECHO.
-ECHO                1¡D±Ò¥Î
+ECHO                1ï¼Žå•Ÿç”¨
 ECHO.
-ECHO                2¡D¸T¥Î
+ECHO                2ï¼Žç¦ç”¨
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 goto Hybridsleep1
 If ErrorLevel 2 If Not ErrorLevel 3 goto Hybridsleep2
 
@@ -863,7 +820,7 @@ powercfg /setdcvalueindex %SCHEME_GUID% 238c9fa8-0aad-41ed-83f4-97be242c8f20 94a
 If ErrorLevel 1 If Not ErrorLevel 2 goto error
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -874,7 +831,7 @@ powercfg /setdcvalueindex %SCHEME_GUID% 238c9fa8-0aad-41ed-83f4-97be242c8f20 94a
 If ErrorLevel 1 If Not ErrorLevel 2 goto error
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ³]©w¦¨¥\¡A«ö¤U¥ô·NÁäªð¦^
+echo è¨­å®šæˆåŠŸï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto power
 
@@ -883,13 +840,13 @@ goto power
 if /i "%SCHEME_GUID%"=="a1841308-3541-4fab-bc81-f73056f20b4a" (powercfg.exe -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c) else powercfg.exe -setactive a1841308-3541-4fab-bc81-f73056f20b4a
 CLS
 MODE con: COLS=50 LINES=5
-set /p S5=½Ð¿é¤J¥ð¯v«eµ¥«Ý®É¶¡(¬í,0ªí¥Ü¤£¥ð¯v)¡G
+set /p S5=è«‹è¼¸å…¥ä¼‘çœ å‰ç­‰å¾…æ™‚é–“(ç§’,0è¡¨ç¤ºä¸ä¼‘çœ )ï¼š
 powercfg /setacvalueindex %SCHEME_GUID% 238c9fa8-0aad-41ed-83f4-97be242c8f20 9d7830a6-7ee4-497e-8888-530a05f02364 %S5%
 powercfg /setdcvalueindex %SCHEME_GUID% 238c9fa8-0aad-41ed-83f4-97be242c8f20 9d7830a6-7ee4-497e-8888-530a05f02364 %S5%
 If ErrorLevel 1 If Not ErrorLevel 2 goto error
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ¥þ³¡¹q·½¿ï¶µ¤w³]©w§¹¦¨¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo å…¨éƒ¨é›»æºé¸é …å·²è¨­å®šå®Œæˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 powercfg.exe -setactive %SCHEME_GUID%
 goto menu
@@ -902,31 +859,31 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          ¸T¥Î¥ð¯v¡]§R°£¥ð¯vÀÉ®×¡^
+ECHO          ç¦ç”¨ä¼‘çœ ï¼ˆåˆªé™¤ä¼‘çœ æª”æ¡ˆï¼‰
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto hibernate1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto hibernate2
 
 :hibernate1
 POWERCFG -H OFF
-ECHO ¾Þ§@¦¨¥\¡C
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æ“ä½œæˆåŠŸã€‚
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :hibernate2
 POWERCFG -H ON
-ECHO ÁÙ­ì¥ð¯v¥\¯à¦¨¥\¡C
+ECHO é‚„åŽŸä¼‘çœ åŠŸèƒ½æˆåŠŸã€‚
 ECHO.
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -938,16 +895,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         ¶}±Ò§Ö³t±Ò°Ê(Hybrid Boot)
+ECHO         é–‹å•Ÿå¿«é€Ÿå•Ÿå‹•(Hybrid Boot)
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto Hybridboot1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto Hybridboot2
 
@@ -957,7 +914,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System" /v "Hibe
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 goto menu
 
@@ -966,7 +923,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System" /v "Hibe
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 goto menu
 
@@ -978,28 +935,28 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO            ½Õ¾ã¥ð¯vÀÉ®×¤j¤p
+ECHO            èª¿æ•´ä¼‘çœ æª”æ¡ˆå¤§å°
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto hiberfil1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto hiberfil2
 
 :hiberfil1
 CLS
 MODE con: COLS=40 LINES=8
-echo ³Ì§C¨t²Î­­¨î¬°¹w³]­È(Á`°O¾ÐÅé¡^ªº50%
-echo ª½±µ¿é¤J¼Æ¦r§Y¥i¡A¤£»Ý¥[¦Ê¤À¸¹
-set /p b=½Ð¿é¤J¥ð¯vÀÉ®×½Õ¾ã¬°¦Ê¤À¤§
+echo æœ€ä½Žç³»çµ±é™åˆ¶ç‚ºé è¨­å€¼(ç¸½è¨˜æ†¶é«”ï¼‰çš„50%
+echo ç›´æŽ¥è¼¸å…¥æ•¸å­—å³å¯ï¼Œä¸éœ€åŠ ç™¾åˆ†è™Ÿ
+set /p b=è«‹è¼¸å…¥ä¼‘çœ æª”æ¡ˆèª¿æ•´ç‚ºç™¾åˆ†ä¹‹
 POWERCFG -H on
 powercfg /h size %b%
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1007,9 +964,9 @@ GOTO menu
 POWERCFG -H on
 powercfg /h size 100
 If ErrorLevel 1 If Not ErrorLevel 2 Goto error
-ECHO ¥ð¯vÀÉ®×ÁÙ­ì¬°¹w³]¤j¤p¡C
+ECHO ä¼‘çœ æª”æ¡ˆé‚„åŽŸç‚ºé è¨­å¤§å°ã€‚
 ECHO.
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1021,38 +978,38 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         Âà²¾µêÀÀ°O¾ÐÅé¨ì«D¨t²ÎºÐ
+ECHO         è½‰ç§»è™›æ“¬è¨˜æ†¶é«”åˆ°éžç³»çµ±ç¢Ÿ
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto pagefile1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto pagefile2
 
 :pagefile1
 CLS
 MODE con: COLS=40 LINES=30
-set /p disk=½Ð¿é¤JµêÀÀ°O¾ÐÅéÂà²¾¨ìªº¥Ø¼Ð¤À°ÏºÏºÐ½s¸¹(¦pd)¡G
+set /p disk=è«‹è¼¸å…¥è™›æ“¬è¨˜æ†¶é«”è½‰ç§»åˆ°çš„ç›®æ¨™åˆ†å€ç£ç¢Ÿç·¨è™Ÿ(å¦‚d)ï¼š
 echo.
-echo ¦Û°ÊºÞ²zµêÀÀ°O¾ÐÅéªì©l¤j¤p©M³Ì¤j­È½Ð¿é¤J0
+echo è‡ªå‹•ç®¡ç†è™›æ“¬è¨˜æ†¶é«”åˆå§‹å¤§å°å’Œæœ€å¤§å€¼è«‹è¼¸å…¥0
 echo.
-echo «ö¤U¥ô·NÁä«ü©wµêÀÀ°O¾ÐÅé¤j¤p
+echo æŒ‰ä¸‹ä»»æ„éµæŒ‡å®šè™›æ“¬è¨˜æ†¶é«”å¤§å°
 pause>nul
-set /p min=½Ð¿é¤JµêÀÀ°O¾ÐÅéªì©l¤j¤p(M,¦p1024)¡G
-set /p max=½Ð¿é¤JµêÀÀ°O¾ÐÅé³Ì¤j­È(M,¦p4096)¡G
+set /p min=è«‹è¼¸å…¥è™›æ“¬è¨˜æ†¶é«”åˆå§‹å¤§å°(M,å¦‚1024)ï¼š
+set /p max=è«‹è¼¸å…¥è™›æ“¬è¨˜æ†¶é«”æœ€å¤§å€¼(M,å¦‚4096)ï¼š
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "PagingFiles" /d "%disk%:\pagefile.sys %min% %max%" /t REG_MULTI_SZ /f
-ECHO ¡u­«¶}¾÷¥Í®Ä¡v¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO ã€Œé‡é–‹æ©Ÿç”Ÿæ•ˆã€ï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :pagefile2
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Memory Management" /v "PagingFiles" /d "?:\pagefile.sys" /t REG_MULTI_SZ /f
-ECHO ¡u­«¶}¾÷¥Í®Ä¡v¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO ã€Œé‡é–‹æ©Ÿç”Ÿæ•ˆã€ï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1064,16 +1021,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         Ãö³¬¨t²Î«OÅ@¨Ã§R°£ÁÙ­ìÂI
+ECHO         é—œé–‰ç³»çµ±ä¿è­·ä¸¦åˆªé™¤é‚„åŽŸé»ž
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto restore1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto restore2
 
@@ -1085,7 +1042,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Installer" /v "L
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1097,53 +1054,15 @@ gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
 echo.
-ECHO ¤w±Ò¥Î¨t²Î«OÅ@°t¸m
-echo ½Ð¦Û¦æ¥´¶}¨t²ÎºÐªº¨t²Î«OÅ@¥\¯à
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO å·²å•Ÿç”¨ç³»çµ±ä¿è­·é…ç½®
+echo è«‹è‡ªè¡Œæ‰“é–‹ç³»çµ±ç¢Ÿçš„ç³»çµ±ä¿è­·åŠŸèƒ½
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 SystemPropertiesProtection.exe
 pause>nul
 GOTO menu
 
 
-:UAC
-CLS
-MODE con: COLS=40 LINES=30
-ECHO.
-ECHO.
-ECHO    **********************************
-ECHO.
-ECHO           Ãö³¬¨Ï¥ÎªÌ±b¤á±±¨î(UAC)
-ECHO.
-ECHO                1¡D°õ¦æ
-ECHO.
-ECHO                2¡DÁÙ­ì
-ECHO.
-ECHO    **********************************
-ECHO.
-ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
-If ErrorLevel 1 If Not ErrorLevel 2 Goto UAC1
-If ErrorLevel 2 If Not ErrorLevel 3 Goto UAC2
 
-:UAC1
-rem reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "EnableLUA" /d 0 /t REG_DWORD /f
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "ConsentPromptBehaviorAdmin" /d 0 /t REG_DWORD /f
-gpupdate /force
-taskkill /f /im explorer.exe
-start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
-pause>nul
-GOTO menu
-
-:UAC2
-rem reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "EnableLUA" /f
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "ConsentPromptBehaviorAdmin" /d 5 /t REG_DWORD /f
-gpupdate /force
-taskkill /f /im explorer.exe
-start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
-pause>nul
-GOTO menu
 
 
 :SkyDrive
@@ -1153,16 +1072,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO       ²¾°£¥kÁä¿ï³æ¤¤ªºSkyDrive Pro
+ECHO       ç§»é™¤å³éµé¸å–®ä¸­çš„SkyDrive Pro
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto SkyDrive1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto SkyDrive2
 
@@ -1170,13 +1089,13 @@ If ErrorLevel 2 If Not ErrorLevel 3 Goto SkyDrive2
 reg delete "HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\SPFS.ContextMenu" /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :SkyDrive2
-echo Sorry,¼È®ÉµLªkÁÙ­ìSkyDrive Pro¿ï³æ
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo Sorry,æš«æ™‚ç„¡æ³•é‚„åŽŸSkyDrive Proé¸å–®
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1188,16 +1107,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO    Windows To Go¤U±Ò¥ÎÀ³¥Î°Ó©±(¥ø·~ª©)
+ECHO    Windows To Goä¸‹å•Ÿç”¨æ‡‰ç”¨å•†åº—(ä¼æ¥­ç‰ˆ)
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto store1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto store2
 
@@ -1206,7 +1125,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore" /v "Remove
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1215,7 +1134,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsStore" /f
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1226,16 +1145,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         ¸T¥Î¥ô°È­p¹º³nÅé¦Û°Ê±Ò°Ê¶µ
+ECHO         ç¦ç”¨ä»»å‹™è¨ˆåŠƒè»Ÿé«”è‡ªå‹•å•Ÿå‹•é …
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto plan1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto plan2
 
@@ -1253,8 +1172,8 @@ SCHTASKS /Change /DISABLE /TN "\Microsoft\Office\OfficeTelemetryAgentFallBack"
 SCHTASKS /Change /DISABLE /TN "\Microsoft\Office\OfficeTelemetryAgentLogOn"
 SCHTASKS /Change /DISABLE /TN "\AdobeAAMUpdater-1.0-%computername%-%username%"
 SCHTASKS /Change /DISABLE /TN "\Microsoft\Office\Office 30 Subscription Heartbeat"
-echo ¤@¨Ç­p¹º¥ô°È¤w¸g¸T¥Î¡A§A¥i¥H¦A¬Ý¬Ý¡C
-echo «ö¤U¥ô·NÁä±N¥´¶}¥ô°È­p¹º³nÅé
+echo ä¸€äº›è¨ˆåŠƒä»»å‹™å·²ç¶“ç¦ç”¨ï¼Œä½ å¯ä»¥å†çœ‹çœ‹ã€‚
+echo æŒ‰ä¸‹ä»»æ„éµå°‡æ‰“é–‹ä»»å‹™è¨ˆåŠƒè»Ÿé«”
 pause>nul
 start taskschd.msc /s
 GOTO menu
@@ -1275,8 +1194,8 @@ SCHTASKS /Change /ENABLE /TN "\Microsoft\Office\OfficeTelemetryAgentLogOn"
 SCHTASKS /Change /ENABLE /TN "\AdobeAAMUpdater-1.0-%computername%-%username%"
 SCHTASKS /Change /ENABLE /TN "\Microsoft\Office\Office 30 Subscription Heartbeat"
 pause>nul
-ECHO ¤w¸gÁÙ­ì³Q¸T¥Îªº­p¹º¥ô°È¡C
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO å·²ç¶“é‚„åŽŸè¢«ç¦ç”¨çš„è¨ˆåŠƒä»»å‹™ã€‚
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1288,16 +1207,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO       ¸T¤î¹B¦æ¹q¸£¦Û°ÊºûÅ@­p¹º
+ECHO       ç¦æ­¢é‹è¡Œé›»è…¦è‡ªå‹•ç¶­è­·è¨ˆåŠƒ
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto SD1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto SD2
 
@@ -1306,7 +1225,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\ScheduledDiagnos
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1315,7 +1234,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\ScheduledDiag
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1327,32 +1246,32 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO        ±Ò¥Î.NET Framework 3.5.1
+ECHO        å•Ÿç”¨.NET Framework 3.5.1
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto NetFX31
 If ErrorLevel 2 If Not ErrorLevel 3 Goto NetFX32
 
 :NetFX31
-echo ½Ð¥ý±¾¸ü¹ïÀ³ª©¥»ªºWindows¦w¸Ë¬M¹³ÀÉ
-set /p c=½Ð¿é¤J±¾¸üªºWindows¬M¹³ÀÉºÏºÐ½s¸¹¡G
+echo è«‹å…ˆæŽ›è¼‰å°æ‡‰ç‰ˆæœ¬çš„Windowså®‰è£æ˜ åƒæª”
+set /p c=è«‹è¼¸å…¥æŽ›è¼‰çš„Windowsæ˜ åƒæª”ç£ç¢Ÿç·¨è™Ÿï¼š
 dism.exe /online /enable-feature /featurename:NetFX3 /Source:%c%:\sources\sxs
 If ErrorLevel 1 If Not ErrorLevel 2 Goto error
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :NetFX32
 start OptionalFeatures.exe
-echo Ãö³¬.NET Framework 3.5½Ð¨ú®ø¤Ä¿ï§Y¥i¡C
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo é—œé–‰.NET Framework 3.5è«‹å–æ¶ˆå‹¾é¸å³å¯ã€‚
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1364,16 +1283,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO           Ãö³¬³nÅé¬Û®e©Ê¤pÀ°¤â
+ECHO           é—œé–‰è»Ÿé«”ç›¸å®¹æ€§å°å¹«æ‰‹
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto PCA1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto PCA2
 
@@ -1384,7 +1303,7 @@ sc stop PcaSvc
 sc config PcaSvc start= disabled
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1395,7 +1314,7 @@ taskkill /f /im explorer.exe
 start %systemroot%\explorer
 sc config PcaSvc start= auto
 sc start PcaSvc
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1407,16 +1326,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          ¸T¤î¤@¤Wºô´N¥´¶}ÂsÄý¾¹
+ECHO          ç¦æ­¢ä¸€ä¸Šç¶²å°±æ‰“é–‹ç€è¦½å™¨
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto AP1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto AP2
 
@@ -1425,7 +1344,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkConnectiv
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1434,7 +1353,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkConnec
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1446,16 +1365,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         §R°£¡u§Úªº¹q¸£¡v6­Ó¸ê®Æ§¨
+ECHO         åˆªé™¤ã€Œæˆ‘çš„é›»è…¦ã€6å€‹è³‡æ–™å¤¾
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto 6FD1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto 6FD2
 
@@ -1474,7 +1393,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVer
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}" /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1493,7 +1412,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersio
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}" /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1505,16 +1424,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          Åã¥Ü¨ü«OÅ@ªº¨t²ÎÀÉ®×
+ECHO          é¡¯ç¤ºå—ä¿è­·çš„ç³»çµ±æª”æ¡ˆ
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto SHOWALL1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto SHOWALL2
 
@@ -1522,7 +1441,7 @@ If ErrorLevel 2 If Not ErrorLevel 3 Goto SHOWALL2
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\Hidden\SHOWALL" /v "CheckedValue" /d 1 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1530,7 +1449,7 @@ GOTO menu
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\Folder\Hidden\SHOWALL" /v "CheckedValue" /d 0 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1542,16 +1461,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          ®à­±Åã¥Ü¡u§Úªº¹q¸£¡v
+ECHO          æ¡Œé¢é¡¯ç¤ºã€Œæˆ‘çš„é›»è…¦ã€
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto TC1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto TC2
 
@@ -1559,7 +1478,7 @@ If ErrorLevel 2 If Not ErrorLevel 3 Goto TC2
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{20D04FE0-3AEA-1069-A2D8-08002B30309D}" /d 0 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1567,7 +1486,7 @@ GOTO menu
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{20D04FE0-3AEA-1069-A2D8-08002B30309D}" /d 1 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1580,39 +1499,39 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO           ±Ò¥ÎIE¼W±j«OÅ@¼Ò¦¡
+ECHO           å•Ÿç”¨IEå¢žå¼·ä¿è­·æ¨¡å¼
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto IE1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto IE2
 
 :IE1
 CLS
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" /v "Isolation" /d "PMEM" /t REG_SZ /f
-set /p Isolation64Bit=64¦ì¨t²Î½Ð¿é¤J1¡A¨ä¥¦½Ðª½±µ«ö¤UEnter¡G
+set /p Isolation64Bit=64ä½ç³»çµ±è«‹è¼¸å…¥1ï¼Œå…¶å®ƒè«‹ç›´æŽ¥æŒ‰ä¸‹Enterï¼š
 if %Isolation64Bit%==1 reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" /v "Isolation64Bit" /d 1 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
 ECHO.
-ECHO ¡u­«¶}¾÷¥Í®Ä¡v¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO ã€Œé‡é–‹æ©Ÿç”Ÿæ•ˆã€ï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :IE2
 CLS
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" /v "Isolation" /d "PMIL" /t REG_SZ /f
-set /p Isolation64Bit=64¦ì¨t²Î½Ð¿é¤J1¡A¨ä¥¦½Ðª½±µ«ö¤UEnter
+set /p Isolation64Bit=64ä½ç³»çµ±è«‹è¼¸å…¥1ï¼Œå…¶å®ƒè«‹ç›´æŽ¥æŒ‰ä¸‹Enter
 if %Isolation64Bit%==1 reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" /v "Isolation64Bit" /d 0 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO ­«¶}¾÷¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO é‡é–‹æ©Ÿç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1624,29 +1543,29 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO       ±NÁ{®É¸ê®Æ§¨²¾°Ê¨ì«D¨t²ÎºÐ
+ECHO       å°‡è‡¨æ™‚è³‡æ–™å¤¾ç§»å‹•åˆ°éžç³»çµ±ç¢Ÿ
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto temp1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto temp2
 
 :temp1
 CLS
 MODE con: COLS=40 LINES=8
-set /p e=½Ð¿é¤JÂà²¾¨ìªº¥Ø¼Ð¤À°ÏºÏºÐ½s¸¹(¦pD)¡G
+set /p e=è«‹è¼¸å…¥è½‰ç§»åˆ°çš„ç›®æ¨™åˆ†å€ç£ç¢Ÿç·¨è™Ÿ(å¦‚D)ï¼š
 reg add "HKEY_CURRENT_USER\Environment" /v "TMP" /d "%e%:\userdata\temp" /t REG_EXPAND_SZ /f
 reg add "HKEY_CURRENT_USER\Environment" /v "TEMP" /d "%e%:\userdata\temp" /t REG_EXPAND_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo Á{®É¸ê®Æ§¨¦¨¥\Âà²¾¨ì%e%:\userdata\temp
-ECHO ­«¶}¾÷¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo è‡¨æ™‚è³‡æ–™å¤¾æˆåŠŸè½‰ç§»åˆ°%e%:\userdata\temp
+ECHO é‡é–‹æ©Ÿç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1655,8 +1574,8 @@ reg add "HKEY_CURRENT_USER\Environment" /v "TMP" /d "%USERPROFILE%\AppData\Local
 reg add "HKEY_CURRENT_USER\Environment" /v "TEMP" /d "%USERPROFILE%\AppData\Local\Temp" /t REG_EXPAND_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo Á{®É¸ê®Æ§¨¸ô®|¤wÁÙ­ì¹w³]
-ECHO ­«¶}¾÷¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo è‡¨æ™‚è³‡æ–™å¤¾è·¯å¾‘å·²é‚„åŽŸé è¨­
+ECHO é‡é–‹æ©Ÿç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1668,16 +1587,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO               Ãö³¬ HomeGroup ®a¥Î¸s²Õ
+ECHO               é—œé–‰ HomeGroup å®¶ç”¨ç¾¤çµ„
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto HG1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto HG2
 
@@ -1686,7 +1605,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\HomeGroup" /v "D
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1695,7 +1614,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\HomeGroup" /f
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1707,28 +1626,28 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO        ©µ¿ð±Ò°Ê Superfetch ªA°È
+ECHO        å»¶é²å•Ÿå‹• Superfetch æœå‹™
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto Superfetch1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto Superfetch2
 
 :Superfetch1
 sc config "SysMain" start= delayed-auto
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :Superfetch2
 sc config "SysMain" start= auto
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1740,27 +1659,27 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          ³]©w§K¿é±K½X¦Û°Êµn¤J
+ECHO          è¨­å®šå…è¼¸å¯†ç¢¼è‡ªå‹•ç™»å…¥
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto netplwiz1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto netplwiz2
 
 :netplwiz1
 CLS
-set /p DUN=½Ð¿é¤J¨Ï¥ÎªÌ¦W¡G
-set /p PSW1=½Ð¿é¤J±K½X¡G
-set /p PSW2=½Ð¦A¦¸¿é¤J±K½X½T»{¡G
+set /p DUN=è«‹è¼¸å…¥ä½¿ç”¨è€…åï¼š
+set /p PSW1=è«‹è¼¸å…¥å¯†ç¢¼ï¼š
+set /p PSW2=è«‹å†æ¬¡è¼¸å…¥å¯†ç¢¼ç¢ºèªï¼š
 if %PSW1%==%PSW2% goto confirm
-echo ¨â¦¸¿é¤Jªº±K½X¤£¤@­P
-echo «ö¤U¥ô·NÁäªð¦^­«·s¿é¤J
+echo å…©æ¬¡è¼¸å…¥çš„å¯†ç¢¼ä¸ä¸€è‡´
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›žé‡æ–°è¼¸å…¥
 pause>nul
 goto netplwiz1
 
@@ -1770,7 +1689,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogo
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DefaultPassword" /d "%PSW1%" /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1779,7 +1698,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogo
 reg DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v "DefaultPassword" /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1791,28 +1710,28 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         Ãö³¬¶}¾÷µe­±¡]GUI¤Þ¾É¡^
+ECHO         é—œé–‰é–‹æ©Ÿç•«é¢ï¼ˆGUIå¼•å°Žï¼‰
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto GUI1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto GUI2
 
 :GUI1
 bcdedit /set quietboot on
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :GUI2
 bcdedit /set quietboot off
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1824,16 +1743,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO              Ãö³¬ IPv6
+ECHO              é—œé–‰ IPv6
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto IPV61
 If ErrorLevel 2 If Not ErrorLevel 3 Goto IPV62
 
@@ -1842,7 +1761,7 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TCPIP6\Parameters"
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
 ECHO.
-ECHO ¡u­«±Ò¥Í®Ä¡v¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO ã€Œé‡å•Ÿç”Ÿæ•ˆã€ï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1851,7 +1770,7 @@ reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TCPIP6\Paramete
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
 ECHO.
-ECHO ¡u­«±Ò¥Í®Ä¡v¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO ã€Œé‡å•Ÿç”Ÿæ•ˆã€ï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -1863,16 +1782,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          Ãö³¬¤£»Ý­nªºµøÄ±®ÄªG
+ECHO          é—œé–‰ä¸éœ€è¦çš„è¦–è¦ºæ•ˆæžœ
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto VE1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto VE2
 
@@ -1881,26 +1800,26 @@ CLS
 MODE con: COLS=75 LINES=22
 ECHO.
 ECHO.
-ECHO  *************************************************************************
+ECHO  ****************************************************************************************
 ECHO.
-ECHO                         ¿ï¾Ü»Ý­n¡uÃö³¬¡vªºµøÄ±®ÄªG
+ECHO                           é¸æ“‡éœ€è¦ã€Œé—œé–‰ã€çš„è¦–è¦ºæ•ˆæžœ
 ECHO.
-echo      1¡DÀx¦s¤u§@¦CÁY¹Ï¹wÄý          10¡DÅã¥Ü¥b³z©úªº¿ï¨ú¯x§Î
-echo      2¡D¦bµøµ¡¤º³¡¥H°Êµe¤è¦¡Åã¥Ü±±¨î¶µ©M¤¸¯À  11¡DÅã¥ÜÁY¹Ï¦Ó«D¹Ï¥Ü
-echo      3¡D±N¥\¯àªí²H¥X©Î·Æ°Ê¨ìÀËµø    12¡D¦bµøµ¡¤UÅã¥Ü³±¼v
-echo      4¡D·Æ°Ê¶}±Ò¤U©Ô¦¡¤è¶ô          13¡D«ö¤U¥\¯àªí¶µ¥Ø«á²H¥X
-echo      5¡D¥­·Æ±²°Êªº²M³æ¤è¶ô          14¡D±N¤u¨ã´£¥Ü²H¥X©Î·Æ°Ê¨ìÀËµø
-echo      6¡D¥h°£¿Ã¹õ¦r«¬¤òÃä            30¡D¦b·Æ¹««ü¼Ð¤UÅã¥Ü³±¼v
-echo      7¡D±Ò¥ÎPeek                    16¡D¹ï®à­±¤Wªº¹Ï¥Ü¼ÐÅÒ¨Ï¥Î³±¼v
-echo      8¡D¤u§@¦C¤¤ªº°Êµe              17¡D±Nµøµ¡³Ì¤j¤Æ©Î³Ì¤p¤Æ®ÉÅã¥Üµøµ¡°Êµe
-echo      9¡D©ì¦²®ÉÅã¥Üµøµ¡¤º®e          18¡D½Õ¾ã¦¨³Ì¨Î®Ä¯à
+echo      1ï¼Žå„²å­˜å·¥ä½œåˆ—ç¸®åœ–é è¦½                    10ï¼Žé¡¯ç¤ºåŠé€æ˜Žçš„é¸å–çŸ©å½¢
+echo      2ï¼Žåœ¨è¦–çª—å…§éƒ¨ä»¥å‹•ç•«æ–¹å¼é¡¯ç¤ºæŽ§åˆ¶é …å’Œå…ƒç´   11ï¼Žé¡¯ç¤ºç¸®åœ–è€Œéžåœ–ç¤º
+echo      3ï¼Žå°‡åŠŸèƒ½è¡¨æ·¡å‡ºæˆ–æ»‘å‹•åˆ°æª¢è¦–              12ï¼Žåœ¨è¦–çª—ä¸‹é¡¯ç¤ºé™°å½±
+echo      4ï¼Žæ»‘å‹•é–‹å•Ÿä¸‹æ‹‰å¼æ–¹å¡Š                    13ï¼ŽæŒ‰ä¸‹åŠŸèƒ½è¡¨é …ç›®å¾Œæ·¡å‡º
+echo      5ï¼Žå¹³æ»‘æ²å‹•çš„æ¸…å–®æ–¹å¡Š                    14ï¼Žå°‡å·¥å…·æç¤ºæ·¡å‡ºæˆ–æ»‘å‹•åˆ°æª¢è¦–
+echo      6ï¼ŽåŽ»é™¤èž¢å¹•å­—åž‹æ¯›é‚Š                      30ï¼Žåœ¨æ»‘é¼ æŒ‡æ¨™ä¸‹é¡¯ç¤ºé™°å½±
+echo      7ï¼Žå•Ÿç”¨Peek                              16ï¼Žå°æ¡Œé¢ä¸Šçš„åœ–ç¤ºæ¨™ç±¤ä½¿ç”¨é™°å½±
+echo      8ï¼Žå·¥ä½œåˆ—ä¸­çš„å‹•ç•«                        17ï¼Žå°‡è¦–çª—æœ€å¤§åŒ–æˆ–æœ€å°åŒ–æ™‚é¡¯ç¤ºè¦–çª—å‹•ç•«
+echo      9ï¼Žæ‹–æ›³æ™‚é¡¯ç¤ºè¦–çª—å…§å®¹                    18ï¼Žèª¿æ•´æˆæœ€ä½³æ•ˆèƒ½
 ECHO.
-ECHO  *************************************************************************
+ECHO  ****************************************************************************************
 ECHO.
-ECHO      ³Æµù¡G²Ä2¡B3¡B4¡B5¡B12¡B13¡B14¡B30¶µ¾÷½X¦b¦P¤@­Ó¦a¤è¡A»Ý­n¤@°_³]©w
+ECHO      å‚™è¨»ï¼šç¬¬2ã€3ã€4ã€5ã€12ã€13ã€14ã€30é …æ©Ÿç¢¼åœ¨åŒä¸€å€‹åœ°æ–¹ï¼Œéœ€è¦ä¸€èµ·è¨­å®š
 ECHO.
 ECHO.
-set /p f=.           ½Ð¿é¤J¾Þ§@§Ç¸¹¨Ã«ö¤UEnter¡]¨Ò¦p9¡^,¿é¤J0ª½±µªð¦^¥D¿ï³æ¡G
+set /p f=.           è«‹è¼¸å…¥æ“ä½œåºè™Ÿä¸¦æŒ‰ä¸‹Enterï¼ˆä¾‹å¦‚9ï¼‰,è¼¸å…¥0ç›´æŽ¥è¿”å›žä¸»é¸å–®ï¼š
 if %f%==0 goto menu
 if %f%==1 goto ve001
 if %f%==2 goto othersVECFG
@@ -1926,7 +1845,7 @@ GOTO VE1error
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM" /v "AlwaysHibernateThumbnails" /d 0 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -1934,7 +1853,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "FontSmoothing" /d 0 /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -1942,7 +1861,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM" /v "EnableAeroPeek" /d 0 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -1950,7 +1869,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarAnimations" /d 0 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -1958,7 +1877,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "DragFullWindows" /d 0 /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -1966,7 +1885,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ListviewAlphaSelect" /d 0 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -1974,7 +1893,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "IconsOnly" /d 1 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -1982,7 +1901,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ListviewShadow" /d 0 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo µn¥X«á¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^
+echo ç™»å‡ºå¾Œç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -1990,7 +1909,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v "MinAnimate" /d 0 /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -2007,7 +1926,7 @@ reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v "MinAnimate" 
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "UserPreferencesMask" /d "9012038010000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ¡uµn¥X¡v¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^
+echo ã€Œç™»å‡ºã€ç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -2018,18 +1937,18 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO            ¿é¤J¦³»~¡A½Ð¿ï¾Ü¡G
+ECHO            è¼¸å…¥æœ‰èª¤ï¼Œè«‹é¸æ“‡ï¼š
 ECHO.
-ECHO        1¡Dªð¦^Ä~Äò§ó§ïµøÄ±®ÄªG
+ECHO        1ï¼Žè¿”å›žç¹¼çºŒæ›´æ”¹è¦–è¦ºæ•ˆæžœ
 ECHO.
-ECHO        2¡D¥´¶}®Ä¯à¿ï¶µ¦Û¦æ­×§ï
+ECHO        2ï¼Žæ‰“é–‹æ•ˆèƒ½é¸é …è‡ªè¡Œä¿®æ”¹
 ECHO.
-ECHO        3¡Dªð¦^¥D¿ï³æ
+ECHO        3ï¼Žè¿”å›žä¸»é¸å–®
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 123 /N /M ¿ï¾Ü¡]1¡B2¡B3¡^¡G
+Choice /C 123 /N /M é¸æ“‡ï¼ˆ1ã€2ã€3ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto VE1
 If ErrorLevel 2 If Not ErrorLevel 3 start SystemPropertiesPerformance.exe & Goto menu
 If ErrorLevel 3 If Not ErrorLevel 4 Goto menu
@@ -2041,24 +1960,24 @@ ECHO.
 ECHO.
 ECHO  *************************************************************************
 ECHO.
-ECHO                         ¿ï¾Ü»Ý­n¡u¥´¶}¡vªºµøÄ±®ÄªG
+ECHO                         é¸æ“‡éœ€è¦ã€Œæ‰“é–‹ã€çš„è¦–è¦ºæ•ˆæžœ
 ECHO.
-echo      1¡DÀx¦s¤u§@¦CÁY¹Ï¹wÄý          10¡DÅã¥Ü¥b³z©úªº¿ï¨ú¯x§Î
-echo      2¡D¦bµøµ¡¤º³¡¥H°Êµe¤è¦¡Åã¥Ü±±¨î¶µ©M¤¸¯À  11¡DÅã¥ÜÁY¹Ï¦Ó«D¹Ï¥Ü
-echo      3¡D±N¥\¯àªí²H¥X©Î·Æ°Ê¨ìÀËµø    12¡D¦bµøµ¡¤UÅã¥Ü³±¼v
-echo      4¡D·Æ°Ê¶}±Ò¤U©Ô¦¡¤è¶ô          13¡D«ö¤U¥\¯àªí¶µ¥Ø«á²H¥X
-echo      5¡D¥­·Æ±²°Êªº²M³æ¤è¶ô          14¡D±N¤u¨ã´£¥Ü²H¥X©Î·Æ°Ê¨ìÀËµø
-echo      6¡D¥h°£¿Ã¹õ¦r«¬¤òÃä            30¡D¦b·Æ¹««ü¼Ð¤UÅã¥Ü³±¼v
-echo      7¡D±Ò¥ÎPeek                    16¡D¹ï®à­±¤Wªº¹Ï¥Ü¼ÐÅÒ¨Ï¥Î³±¼v
-echo      8¡D¤u§@¦C¤¤ªº°Êµe              17¡D±Nµøµ¡³Ì¤j¤Æ©Î³Ì¤p¤Æ®ÉÅã¥Üµøµ¡°Êµe
-echo      9¡D©ì¦²®ÉÅã¥Üµøµ¡¤º®e          18¡D½Õ¾ã¦¨³Ì¨Î¥~Æ[
+echo      1ï¼Žå„²å­˜å·¥ä½œåˆ—ç¸®åœ–é è¦½                    10ï¼Žé¡¯ç¤ºåŠé€æ˜Žçš„é¸å–çŸ©å½¢
+echo      2ï¼Žåœ¨è¦–çª—å…§éƒ¨ä»¥å‹•ç•«æ–¹å¼é¡¯ç¤ºæŽ§åˆ¶é …å’Œå…ƒç´   11ï¼Žé¡¯ç¤ºç¸®åœ–è€Œéžåœ–ç¤º
+echo      3ï¼Žå°‡åŠŸèƒ½è¡¨æ·¡å‡ºæˆ–æ»‘å‹•åˆ°æª¢è¦–              12ï¼Žåœ¨è¦–çª—ä¸‹é¡¯ç¤ºé™°å½±
+echo      4ï¼Žæ»‘å‹•é–‹å•Ÿä¸‹æ‹‰å¼æ–¹å¡Š                    13ï¼ŽæŒ‰ä¸‹åŠŸèƒ½è¡¨é …ç›®å¾Œæ·¡å‡º
+echo      5ï¼Žå¹³æ»‘æ²å‹•çš„æ¸…å–®æ–¹å¡Š                    14ï¼Žå°‡å·¥å…·æç¤ºæ·¡å‡ºæˆ–æ»‘å‹•åˆ°æª¢è¦–
+echo      6ï¼ŽåŽ»é™¤èž¢å¹•å­—åž‹æ¯›é‚Š                      30ï¼Žåœ¨æ»‘é¼ æŒ‡æ¨™ä¸‹é¡¯ç¤ºé™°å½±
+echo      7ï¼Žå•Ÿç”¨Peek                              16ï¼Žå°æ¡Œé¢ä¸Šçš„åœ–ç¤ºæ¨™ç±¤ä½¿ç”¨é™°å½±
+echo      8ï¼Žå·¥ä½œåˆ—ä¸­çš„å‹•ç•«                        17ï¼Žå°‡è¦–çª—æœ€å¤§åŒ–æˆ–æœ€å°åŒ–æ™‚é¡¯ç¤ºè¦–çª—å‹•ç•«
+echo      9ï¼Žæ‹–æ›³æ™‚é¡¯ç¤ºè¦–çª—å…§å®¹                    18ï¼Žèª¿æ•´æˆæœ€ä½³å¤–è§€
 ECHO.
 ECHO  *************************************************************************
 ECHO.
-ECHO      ³Æµù¡G²Ä2¡B3¡B4¡B5¡B12¡B13¡B14¡B30¶µ¾÷½X¦b¦P¤@­Ó¦a¤è¡A»Ý­n¤@°_³]©w
+ECHO      å‚™è¨»ï¼šç¬¬2ã€3ã€4ã€5ã€12ã€13ã€14ã€30é …æ©Ÿç¢¼åœ¨åŒä¸€å€‹åœ°æ–¹ï¼Œéœ€è¦ä¸€èµ·è¨­å®š
 ECHO.
 ECHO.
-set /p g=.           ½Ð¿é¤J¾Þ§@§Ç¸¹¨Ã«ö¤UEnter¡]¨Ò¦p9¡^,¿é¤J0ª½±µªð¦^¥D¿ï³æ¡G
+set /p g=.           è«‹è¼¸å…¥æ“ä½œåºè™Ÿä¸¦æŒ‰ä¸‹Enterï¼ˆä¾‹å¦‚9ï¼‰,è¼¸å…¥0ç›´æŽ¥è¿”å›žä¸»é¸å–®ï¼š
 if %g%==0 goto menu
 if %g%==1 goto ve001
 if %g%==2 goto othersVECFG
@@ -2084,7 +2003,7 @@ GOTO VE2error
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM" /v "AlwaysHibernateThumbnails" /d 1 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -2092,7 +2011,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "FontSmoothing" /d 2 /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -2100,7 +2019,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM" /v "EnableAeroPeek" /d 1 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -2108,7 +2027,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarAnimations" /d 1 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -2116,7 +2035,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "DragFullWindows" /d 1 /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -2124,7 +2043,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ListviewAlphaSelect" /d 1 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -2132,7 +2051,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "IconsOnly" /d 0 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -2140,7 +2059,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "ListviewShadow" /d 1 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -2148,7 +2067,7 @@ goto VE1
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v "MinAnimate" /d 1 /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo «ö¤U¥ô·NÁäªð¦^
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE1
 
@@ -2165,7 +2084,7 @@ reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v "MinAnimate" 
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "UserPreferencesMask" /d "9E3E078012000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-echo ¡uµn¥X¡v¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^
+echo ã€Œç™»å‡ºã€ç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 goto VE2
 
@@ -2176,18 +2095,18 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO            ¿é¤J¦³»~¡A½Ð¿ï¾Ü¡G
+ECHO            è¼¸å…¥æœ‰èª¤ï¼Œè«‹é¸æ“‡ï¼š
 ECHO.
-ECHO        1¡Dªð¦^Ä~Äò§ó§ïµøÄ±®ÄªG
+ECHO        1ï¼Žè¿”å›žç¹¼çºŒæ›´æ”¹è¦–è¦ºæ•ˆæžœ
 ECHO.
-ECHO        2¡D¥´¶}®Ä¯à¿ï¶µ¦Û¦æ­×§ï
+ECHO        2ï¼Žæ‰“é–‹æ•ˆèƒ½é¸é …è‡ªè¡Œä¿®æ”¹
 ECHO.
-ECHO        3¡Dªð¦^¥D¿ï³æ
+ECHO        3ï¼Žè¿”å›žä¸»é¸å–®
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 123 /N /M ¿ï¾Ü¡]1¡B2¡B3¡^¡G
+Choice /C 123 /N /M é¸æ“‡ï¼ˆ1ã€2ã€3ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto VE2
 If ErrorLevel 2 If Not ErrorLevel 3 start SystemPropertiesPerformance.exe & Goto menu
 If ErrorLevel 3 If Not ErrorLevel 4 Goto menu
@@ -2197,83 +2116,83 @@ If ErrorLevel 3 If Not ErrorLevel 4 Goto menu
 CLS
 MODE con: COLS=30 LINES=5
 set a=9###0#801#000000
-echo ¦bµøµ¡¤º³¡¥H°Êµe¤è¦¡Åã¥Ü±±¨î¶µ©M¤¸¯À
-echo «ö¤U1¥´¶}¡A«ö¤U2Ãö³¬
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+echo åœ¨è¦–çª—å…§éƒ¨ä»¥å‹•ç•«æ–¹å¼é¡¯ç¤ºæŽ§åˆ¶é …å’Œå…ƒç´ 
+echo æŒ‰ä¸‹1æ‰“é–‹ï¼ŒæŒ‰ä¸‹2é—œé–‰
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 set b=%a:#00=200%
 If ErrorLevel 2 If Not ErrorLevel 3 set b=%a:#00=000%
-echo «ö¤U¥ô·NÁä³]©w¤U¤@¿ï¶µ
+echo æŒ‰ä¸‹ä»»æ„éµè¨­å®šä¸‹ä¸€é¸é …
 pause>nul
 rem 9###0#801*000000
 
 CLS
 MODE con: COLS=30 LINES=5
-echo ¦bµøµ¡¤UÅã¥Ü³±¼v
-echo «ö¤U1¥´¶}¡A«ö¤U2Ãö³¬
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+echo åœ¨è¦–çª—ä¸‹é¡¯ç¤ºé™°å½±
+echo æŒ‰ä¸‹1æ‰“é–‹ï¼ŒæŒ‰ä¸‹2é—œé–‰
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 set b=%b:0#8=078%
 If ErrorLevel 2 If Not ErrorLevel 3 set b=%b:0#8=038%
-echo «ö¤U¥ô·NÁä³]©w¤U¤@¿ï¶µ
+echo æŒ‰ä¸‹ä»»æ„éµè¨­å®šä¸‹ä¸€é¸é …
 pause>nul
 rem 9###0*801*000000
 
 CLS
 MODE con: COLS=30 LINES=5
-echo ¦b·Æ¹««ü¼Ð¤UÅã¥Ü³±¼v
-echo «ö¤U1¥´¶}¡A«ö¤U2Ãö³¬
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+echo åœ¨æ»‘é¼ æŒ‡æ¨™ä¸‹é¡¯ç¤ºé™°å½±
+echo æŒ‰ä¸‹1æ‰“é–‹ï¼ŒæŒ‰ä¸‹2é—œé–‰
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 set b=%b:9###0=9#3#0%
 If ErrorLevel 2 If Not ErrorLevel 3 set b=%b:9###0=9#1#0%
-echo «ö¤U¥ô·NÁä³]©w¤U¤@¿ï¶µ
+echo æŒ‰ä¸‹ä»»æ„éµè¨­å®šä¸‹ä¸€é¸é …
 pause>nul
 rem 9#*#0*801*000000
 
 CLS
 MODE con: COLS=30 LINES=5
-echo «ö¤U¥\¯àªí¶µ¥Ø«á²H¥X
-echo «ö¤U1¥´¶}¡A«ö¤U2Ãö³¬
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+echo æŒ‰ä¸‹åŠŸèƒ½è¡¨é …ç›®å¾Œæ·¡å‡º
+echo æŒ‰ä¸‹1æ‰“é–‹ï¼ŒæŒ‰ä¸‹2é—œé–‰
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 set c=e
 If ErrorLevel 2 If Not ErrorLevel 3 set c=a
-echo «ö¤U¥ô·NÁä³]©w¤U¤@¿ï¶µ
+echo æŒ‰ä¸‹ä»»æ„éµè¨­å®šä¸‹ä¸€é¸é …
 pause>nul
 
 CLS
 MODE con: COLS=40 LINES=5
-echo ±N¤u¨ã´£¥Ü²H¥X©Î·Æ°Ê¨ìÀËµø
-echo «ö¤U1¥´¶}¡A«ö¤U2Ãö³¬
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+echo å°‡å·¥å…·æç¤ºæ·¡å‡ºæˆ–æ»‘å‹•åˆ°æª¢è¦–
+echo æŒ‰ä¸‹1æ‰“é–‹ï¼ŒæŒ‰ä¸‹2é—œé–‰
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 if %c%==e (set b=%b:#0=e0%) else (set b=%b:#0=a0%)
 If ErrorLevel 2 If Not ErrorLevel 3 if %c%==a (set b=%b:#0=20%) else (set b=%b:#0=60%)
-echo «ö¤U¥ô·NÁä³]©w¤U¤@¿ï¶µ
+echo æŒ‰ä¸‹ä»»æ„éµè¨­å®šä¸‹ä¸€é¸é …
 pause>nul
 rem 9#***801*000000
 
 CLS
 MODE con: COLS=40 LINES=5
-echo ±N¥\¯àªí²H¥X©Î·Æ°Ê¨ìÀËµø
-echo «ö¤U1¥´¶}¡A«ö¤U2Ãö³¬
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+echo å°‡åŠŸèƒ½è¡¨æ·¡å‡ºæˆ–æ»‘å‹•åˆ°æª¢è¦–
+echo æŒ‰ä¸‹1æ‰“é–‹ï¼ŒæŒ‰ä¸‹2é—œé–‰
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 set d=e6a2
 If ErrorLevel 2 If Not ErrorLevel 3 set d=c840
-echo «ö¤U¥ô·NÁä³]©w¤U¤@¿ï¶µ
+echo æŒ‰ä¸‹ä»»æ„éµè¨­å®šä¸‹ä¸€é¸é …
 pause>nul
 
 CLS
 MODE con: COLS=30 LINES=5
-echo ·Æ°Ê¶}±Ò¤U©Ô¦¡¤è¶ô
-echo «ö¤U1¥´¶}¡A«ö¤U2Ãö³¬
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+echo æ»‘å‹•é–‹å•Ÿä¸‹æ‹‰å¼æ–¹å¡Š
+echo æŒ‰ä¸‹1æ‰“é–‹ï¼ŒæŒ‰ä¸‹2é—œé–‰
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 if %d%==e6a2 (set d=e6) else (set d=c4)
 If ErrorLevel 2 If Not ErrorLevel 3 if %d%==c840 (set d=80) else (set d=a2)
-echo «ö¤U¥ô·NÁä³]©w¤U¤@¿ï¶µ
+echo æŒ‰ä¸‹ä»»æ„éµè¨­å®šä¸‹ä¸€é¸é …
 pause>nul
 
 CLS
 MODE con: COLS=30 LINES=5
-echo ¥­·Æ±²°Êªº²M³æ¤è¶ô
-echo «ö¤U1¥´¶}¡A«ö¤U2Ãö³¬
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+echo å¹³æ»‘æ²å‹•çš„æ¸…å–®æ–¹å¡Š
+echo æŒ‰ä¸‹1æ‰“é–‹ï¼ŒæŒ‰ä¸‹2é—œé–‰
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 goto lastif1
 If ErrorLevel 2 If Not ErrorLevel 3 goto lastif2
 
@@ -2288,11 +2207,12 @@ IF %d%==e6 (  set b=%b:9#=9e%) ELSE (
           set b=%b:9#=9a%
         )
     )
-)
+
+)
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "UserPreferencesMask" /d "%b%" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO VE1
 
@@ -2307,11 +2227,12 @@ IF %d%==e6 (  set b=%b:9#=96%) ELSE (
           set b=%b:9#=92%
         )
     )
-)
+
+)
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "UserPreferencesMask" /d "%b%" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO VE1
 
@@ -2323,16 +2244,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         Ãö³¬«È¤áÅéÅç§ïµ½­p¹º
+ECHO         é—œé–‰å®¢æˆ¶é«”é©—æ”¹å–„è¨ˆåŠƒ
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto CEIP1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto CEIP2
 
@@ -2341,7 +2262,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SQMClient\Windows" /v "C
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2350,7 +2271,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SQMClient" /f
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2361,16 +2282,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          ÁôÂÃ­«­n°T®§¤¤¤ß¤u§@¦C¹Ï¥Ü
+ECHO          éš±è—é‡è¦è¨Šæ¯ä¸­å¿ƒå·¥ä½œåˆ—åœ–ç¤º
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto wsc1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto wsc2
 
@@ -2380,7 +2301,7 @@ reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Ex
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2390,7 +2311,7 @@ reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2402,16 +2323,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO             Ãö³¬¦Û°Ê¼½©ñ
+ECHO             é—œé–‰è‡ªå‹•æ’­æ”¾
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto autoUSB1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto autoUSB2
 
@@ -2421,7 +2342,7 @@ reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Ex
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2431,7 +2352,7 @@ reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2443,16 +2364,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO           ³]©wµøµ¡¶W¯¶Ãä®Ø
+ECHO           è¨­å®šè¦–çª—è¶…çª„é‚Šæ¡†
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto PB1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto PB2
 
@@ -2460,7 +2381,7 @@ If ErrorLevel 2 If Not ErrorLevel 3 Goto PB2
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v "PaddedBorderWidth" /d 0 /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO ­«±Ò¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO é‡å•Ÿç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2468,7 +2389,7 @@ GOTO menu
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v "PaddedBorderWidth" /d -60 /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO ­«±Ò¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO é‡å•Ÿç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2480,16 +2401,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO      ¸ê·½¦^¦¬µ©¥kÁä©T©w¨ì¶}©l¿ï³æ
+ECHO      è³‡æºå›žæ”¶ç­’å³éµå›ºå®šåˆ°é–‹å§‹é¸å–®
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto RBM1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto RBM2
 
@@ -2497,7 +2418,7 @@ If ErrorLevel 2 If Not ErrorLevel 3 Goto RBM2
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shellex\ContextMenuHandlers\PintoStartScreen" /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2505,7 +2426,7 @@ GOTO menu
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shellex\ContextMenuHandlers\PintoStartScreen" /ve /d "{470C0EBD-5D73-4d58-9CED-E91E22E23282}" /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2517,16 +2438,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO        Ãö³¬ SmartScreen ¿z¿ï¤u¨ã
+ECHO        é—œé–‰ SmartScreen ç¯©é¸å·¥å…·
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto SC1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto SC2
 
@@ -2534,7 +2455,7 @@ If ErrorLevel 2 If Not ErrorLevel 3 Goto SC2
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "SmartScreenEnabled" /d off /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2542,7 +2463,7 @@ GOTO menu
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "SmartScreenEnabled" /d RequireAdmin /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2553,16 +2474,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         Ãö¾÷®É±j¨îÃö³¬­I´ºµ{¦¡¤£µ¥«Ý
+ECHO         é—œæ©Ÿæ™‚å¼·åˆ¶é—œé–‰èƒŒæ™¯ç¨‹å¼ä¸ç­‰å¾…
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto TO1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto TO2
 
@@ -2570,7 +2491,7 @@ If ErrorLevel 2 If Not ErrorLevel 3 Goto TO2
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /d 0 /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2578,7 +2499,7 @@ GOTO menu
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control" /v "WaitToKillServiceTimeout" /d 5000 /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2590,16 +2511,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO        Ãö³¬¤£¥²­nªºµøÄ±°Êµe®ÄªG
+ECHO        é—œé–‰ä¸å¿…è¦çš„è¦–è¦ºå‹•ç•«æ•ˆæžœ
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto DWM1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto DWM2
 
@@ -2610,7 +2531,7 @@ reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v "MinAnimate" 
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2621,7 +2542,7 @@ reg add "HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics" /v "MinAnimate" 
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2632,16 +2553,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO             Ãö³¬»·ºÝ¨ó§U
+ECHO             é—œé–‰é ç«¯å”åŠ©
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto SPR1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto SPR2
 
@@ -2652,7 +2573,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Serv
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2663,7 +2584,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal S
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2675,25 +2596,25 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          §ó§ïIE¹w³]¤U¸ü¦ì¸m
+ECHO          æ›´æ”¹IEé è¨­ä¸‹è¼‰ä½ç½®
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto IED1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto IED2
 
 :IED1
-set /p d=½Ð¿é¤JIE¤U¸ü¸ô®|(¦p"D:\¨³¹p¤U¸ü")¡G
+set /p d=è«‹è¼¸å…¥IEä¸‹è¼‰è·¯å¾‘(å¦‚"D:\è¿…é›·ä¸‹è¼‰")ï¼š
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" /v "Default Download Directory" /d "%d%" /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO ­«¶}¾÷¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO é‡é–‹æ©Ÿç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2701,7 +2622,7 @@ GOTO menu
 reg delete "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" /v "Default Download Directory" /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO ­«¶}¾÷¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO é‡é–‹æ©Ÿç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2713,38 +2634,38 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO            ²M²zÀ³¥Î°Ó©±§Ö¨ú
+ECHO            æ¸…ç†æ‡‰ç”¨å•†åº—å¿«å–
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto wsreset1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto wsreset2
 
 :wsreset1
 CLS
-echo ¦pªG§A¤§«e¨Ï¥Î¹L¥»¤u¨ã
+echo å¦‚æžœä½ ä¹‹å‰ä½¿ç”¨éŽæœ¬å·¥å…·
 echo.
-echo ½Ð¦b±N¥´¶}ªº¥ô°ÈºÞ²z¾¹¤¤­«±ÒÀÉ®×Á`ºÞ
+echo è«‹åœ¨å°‡æ‰“é–‹çš„ä»»å‹™ç®¡ç†å™¨ä¸­é‡å•Ÿæª”æ¡ˆç¸½ç®¡
 echo.
-echo ®à­±°{¤@¤U¤~¦æ
+echo æ¡Œé¢é–ƒä¸€ä¸‹æ‰è¡Œ
 echo.
-echo ¦A«ö¤U¥ô·NÁäÄ~Äò°õ¦æ¾Þ§@
+echo å†æŒ‰ä¸‹ä»»æ„éµç¹¼çºŒåŸ·è¡Œæ“ä½œ
 start taskmgr
 pause>nul
 wsreset
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :wsreset2
-echo §Ö¨ú¤w²M°£¡AµLªkÁÙ­ì¡C
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo å¿«å–å·²æ¸…é™¤ï¼Œç„¡æ³•é‚„åŽŸã€‚
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2756,16 +2677,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO        ¤£¸g¥Ñ¸ê·½¦^¦¬µ©¡Aª½±µ§R°£ÀÉ®×
+ECHO        ä¸ç¶“ç”±è³‡æºå›žæ”¶ç­’ï¼Œç›´æŽ¥åˆªé™¤æª”æ¡ˆ
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto DFD1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto DFD2
 
@@ -2776,7 +2697,7 @@ reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Ex
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2787,7 +2708,7 @@ reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2799,34 +2720,34 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         ¤u§@¦C¤é´ÁÅã¥Ü¡u¬P´Á´X¡v
+ECHO         å·¥ä½œåˆ—æ—¥æœŸé¡¯ç¤ºã€Œæ˜ŸæœŸå¹¾ã€
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto week1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto week2
 
 :week1
-reg add "HKEY_CURRENT_USER\Control Panel\International" /v "sLongDate" /d "yyyy'¦~'M'¤ë'd'¤é', dddd" /t REG_SZ /f
+reg add "HKEY_CURRENT_USER\Control Panel\International" /v "sLongDate" /d "yyyy'å¹´'M'æœˆ'd'æ—¥', dddd" /t REG_SZ /f
 reg add "HKEY_CURRENT_USER\Control Panel\International" /v "sShortDate" /d "yyyy/M/d/ddd" /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :week2
-reg add "HKEY_CURRENT_USER\Control Panel\International" /v "sLongDate" /d "yyyy'¦~'M'¤ë'd'¤é'" /t REG_SZ /f
+reg add "HKEY_CURRENT_USER\Control Panel\International" /v "sLongDate" /d "yyyy'å¹´'M'æœˆ'd'æ—¥'" /t REG_SZ /f
 reg add "HKEY_CURRENT_USER\Control Panel\International" /v "sShortDate" /d "yyyy/M/d" /t REG_SZ /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2838,31 +2759,31 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO       ³]©w¨t²Î¤º«ØºI¹ÏÀx¦s¨ì®à­±
+ECHO       è¨­å®šç³»çµ±å…§å»ºæˆªåœ–å„²å­˜åˆ°æ¡Œé¢
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-ECHO     ´£¥Ü¡G§Ö±¶ÁäWin+PrintScreenºI¹Ï
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+ECHO     æç¤ºï¼šå¿«æ·éµWin+PrintScreenæˆªåœ–
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto screenshot1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto screenshot2
 
 :screenshot1
 rd /s /q %userprofile%\pictures\Screenshots
 mklink /j %userprofile%\pictures\Screenshots %userprofile%\desktop
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :screenshot2
 rd /s /q %userprofile%\pictures\Screenshots
-echo ¾Þ§@¦¨¥\¡C
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo æ“ä½œæˆåŠŸã€‚
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2874,28 +2795,28 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          Ãö³¬ºÏºÐ¸H¤ù¾ã²z­p¹º
+ECHO          é—œé–‰ç£ç¢Ÿç¢Žç‰‡æ•´ç†è¨ˆåŠƒ
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto dfrgui1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto dfrgui2
 
 :dfrgui1
 SCHTASKS /Change /DISABLE /TN "\Microsoft\Windows\Defrag\ScheduledDefrag"
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :dfrgui2
 SCHTASKS /Change /ENABLE /TN "\Microsoft\Windows\Defrag\ScheduledDefrag"
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2907,16 +2828,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO          ¸T¥Î¨t²Î°O¿ýÀÉ»P¼g¤J°»¿ù¸ê°T
+ECHO          ç¦ç”¨ç³»çµ±è¨˜éŒ„æª”èˆ‡å¯«å…¥åµéŒ¯è³‡è¨Š
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto log1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto log2
 
@@ -2929,7 +2850,7 @@ gpupdate /force
 wmic recoveros set DebugInfoType = 0
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2942,7 +2863,7 @@ gpupdate /force
 wmic recoveros set DebugInfoType=2
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2954,16 +2875,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO       ¸T¥ÎºÃÃø±Æ¸Ñ©M¨t²Î¶EÂ_ªA°È
+ECHO       ç¦ç”¨ç–‘é›£æŽ’è§£å’Œç³»çµ±è¨ºæ–·æœå‹™
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto DPS1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto DPS2
 
@@ -2974,7 +2895,7 @@ sc stop DPS
 sc config DPS start= disabled
 sc config WdiServiceHost start= disabled
 sc config WdiSystemHost start= disabled
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -2983,49 +2904,49 @@ sc config DPS start= auto
 sc config WdiServiceHost start= demand
 sc config WdiSystemHost start= demand
 sc start DPS
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 
-rem «ùÄò²K¥[¤¤¡AHold On Please!
+rem æŒçºŒæ·»åŠ ä¸­ï¼ŒHold On Please!
 :menu2
 CLS
 COLOR 0a
 MODE con: COLS=77 LINES=36
 ECHO.
 ECHO =============================================================================
-ECHO                      Windows 8.1 Update Àu¤Æ¤j¸É©«(Äò)                           
+ECHO                      Windows 8.1 Update å„ªåŒ–å¤§è£œå¸–(çºŒ)                           
 ECHO    #+++++++++++++++++++++++++++++++++#+++++++++++++++++++++++++++++++++++#
-ECHO    # 01¡D¥h°£§Ö±¶¤è¦¡¤p½bÀY©M«áºó*   # 26¡D±NÁ{®É¸ê®Æ§¨²¾°Ê¨ì«D¨t²ÎºÐ    #
-ECHO    # 02¡D¥h°£UAC¤p¬ÞµP*              # 27¡DÃö³¬ HomeGroup ®a¥Î¸s²Õ       #
-ECHO    # 03¡DIE11¶}±Ò¥ø·~¼Ò¦¡*           # 28¡D©µ¿ð±Ò°Ê Superfetch ªA°È      #
-ECHO    # 04¡D±Ò¥Î Administrator ±b¤á*    # 29¡D³]©w§K¿é±K½X¦Û°Êµn¤J          #
-ECHO    # 05¡DÁôÂÃ¾ðª¬µ¡®æ®a¥Î¸s²Õ©Mºô¸ô* # 30¡DÃö³¬¶}¾÷µe­±¡]GUI¤Þ¾É¡^       #
-ECHO    # 06¡D«ü¦V¥k¤W¨¤¤£Åã¥Ü5­Ó±`¥ÎÁä*  # 31¡DÃö³¬ IPv6                     #
-ECHO    # 07¡D¶}©l¿ï³æ¦Û°ÊÅã¥Ü"À³¥Î"ÀËµø* # 32¡DÃö³¬¤£»Ý­nªºµøÄ±¯S®Ä          #
-ECHO    # 08¡Dµn¤JÅã¥Ü®à­±¦Ó«D¶}©l¿ï³æ*   # 33¡DÃö³¬«È¤áÅéÅç§ïµ½­p¹º          #
-ECHO    # 09¡DÃö³¬­«­n°T®§¤¤¤ß®ø®§´£¥Ü*   # 34¡DÃö³¬­«­n°T®§¤¤¤ß¤u§@¦C¹Ï¥Ü    #
-ECHO    # 10¡DÂê©wIE¥D­¶*                 # 35¡DÃö³¬¦Û°Ê¼½©ñ©Î¦Û°Ê¥´¶}ÀH¨­ºÐ  #
-ECHO    # 11¡D¥´¶}IE½Ð¤Å°lÂÜ¥\¯à*         # 36¡D³]©wµøµ¡¶W¯¶Ãä®Ø              #
-ECHO    # 12¡DÂà²¾µêÀÀ°O¾ÐÅé              # 37¡D¸ê·½¦^¦¬µ©¥kÁä©T©w¨ì¶}©l¿ï³æ  #
-ECHO    # 13¡DÃö³¬¨t²Î«OÅ@                # 38¡D¤£¸g¥Ñ¸ê·½¦^¦¬µ©¡Aª½±µ§R°£ÀÉ®×#
-ECHO    # 14¡DÃö³¬¨Ï¥ÎªÌ±b¤á±±¨î(UAC)     # 39¡DÃö³¬ SmartScreen ¿z¿ï¤u¨ã     #
-ECHO    # 30¡DWindows To Go±Ò¥ÎÀ³¥Î°Ó©±   # 40¡DÃö¾÷®É±j¨îÃö³¬­I´ºµ{¦¡¤£µ¥«Ý  #
-ECHO    # 16¡DÃö³¬­p¹º¥ô°ÈÁôÂÃªº¦Û°Ê±Ò°Ê  # 41¡DÃö³¬¤£¥²­nªºµøÄ±°Êµe®ÄªG      #
-ECHO    # 17¡D²¾°£¥kÁä¿ï³æSky Drive Pro   # 42¡DÃö³¬³nÅéJump List             #
-ECHO    # 18¡D¸T¤î¹B¦æ¹q¸£¦Û°ÊºûÅ@­p¹º    # 43¡DÃö³¬»·ºÝ¨ó§U                  #
-ECHO    # 19¡D±Ò¥Î.NET Framework 3.5.1    # 44¡D§ó§ïIE¹w³]¤U¸ü¦ì¸m            #
-ECHO    # 20¡DÃö³¬³nÅé¬Û®e©Ê¤pÀ°¤â        # 45¡D²M²zÀ³¥Î°Ó©±§Ö¨ú              #
-ECHO    # 21¡D¸T¤î¤Wºô¥´¶}ÂsÄý¾¹¥²À³      # 46¡D¤u§@¦CÅã¥Ü¡u¬P´Á´X¡v          #
-ECHO    # 22¡D§R°£¡u§Úªº¹q¸£¡v6­Ó¸ê®Æ§¨   # 47¡D³]©w¨t²Î¤º«ØºI¹ÏÀx¦s¨ì®à­±    #
-ECHO    # 23¡DÅã¥Ü¨ü«OÅ@ªº¨t²ÎÀÉ®×        # 48¡DÃö³¬ºÏºÐ¸H¤ù¾ã²z­p¹º          #
-ECHO    # 24¡D®à­±Åã¥Ü¡u§Úªº¹q¸£¡v        # 49¡D¸T¥Î¨t²Î°O¿ýÀÉ»P¼g¤J°»¿ù¸ê°T  #
-ECHO    # 25¡D±Ò°ÊIE¼W±j«OÅ@¼Ò¦¡          # 50¡D¸T¥ÎºÃÃø±Æ¸Ñ©M¨t²Î¶EÂ_ªA°È    #
+ECHO    # 01ï¼ŽåŽ»é™¤å¿«æ·æ–¹å¼å°ç®­é ­å’Œå¾Œç¶´*   # 26ï¼Žå°‡è‡¨æ™‚è³‡æ–™å¤¾ç§»å‹•åˆ°éžç³»çµ±ç¢Ÿ    #
+ECHO    # 02ï¼ŽåŽ»é™¤UACå°ç›¾ç‰Œ*              # 27ï¼Žé—œé–‰ HomeGroup å®¶ç”¨ç¾¤çµ„       #
+ECHO    # 03ï¼ŽIE11é–‹å•Ÿä¼æ¥­æ¨¡å¼*           # 28ï¼Žå»¶é²å•Ÿå‹• Superfetch æœå‹™      #
+ECHO    # 04ï¼Žå•Ÿç”¨ Administrator å¸³æˆ¶*    # 29ï¼Žè¨­å®šå…è¼¸å¯†ç¢¼è‡ªå‹•ç™»å…¥          #
+ECHO    # 05ï¼Žéš±è—æ¨¹ç‹€çª—æ ¼å®¶ç”¨ç¾¤çµ„å’Œç¶²è·¯* # 30ï¼Žé—œé–‰é–‹æ©Ÿç•«é¢ï¼ˆGUIå¼•å°Žï¼‰       #
+ECHO    # 06ï¼ŽæŒ‡å‘å³ä¸Šè§’ä¸é¡¯ç¤º5å€‹å¸¸ç”¨éµ*  # 31ï¼Žé—œé–‰ IPv6                     #
+ECHO    # 07ï¼Žé–‹å§‹é¸å–®è‡ªå‹•é¡¯ç¤º"æ‡‰ç”¨"æª¢è¦–* # 32ï¼Žé—œé–‰ä¸éœ€è¦çš„è¦–è¦ºç‰¹æ•ˆ          #
+ECHO    # 08ï¼Žç™»å…¥é¡¯ç¤ºæ¡Œé¢è€Œéžé–‹å§‹é¸å–®*   # 33ï¼Žé—œé–‰å®¢æˆ¶é«”é©—æ”¹å–„è¨ˆåŠƒ          #
+ECHO    # 09ï¼Žé—œé–‰é‡è¦è¨Šæ¯ä¸­å¿ƒæ¶ˆæ¯æç¤º*   # 34ï¼Žé—œé–‰é‡è¦è¨Šæ¯ä¸­å¿ƒå·¥ä½œåˆ—åœ–ç¤º    #
+ECHO    # 10ï¼ŽéŽ–å®šIEä¸»é *                 # 35ï¼Žé—œé–‰è‡ªå‹•æ’­æ”¾æˆ–è‡ªå‹•æ‰“é–‹éš¨èº«ç¢Ÿ  #
+ECHO    # 11ï¼Žæ‰“é–‹IEè«‹å‹¿è¿½è¹¤åŠŸèƒ½*         # 36ï¼Žè¨­å®šè¦–çª—è¶…çª„é‚Šæ¡†              #
+ECHO    # 12ï¼Žè½‰ç§»è™›æ“¬è¨˜æ†¶é«”              # 37ï¼Žè³‡æºå›žæ”¶ç­’å³éµå›ºå®šåˆ°é–‹å§‹é¸å–®  #
+ECHO    # 13ï¼Žé—œé–‰ç³»çµ±ä¿è­·                # 38ï¼Žä¸ç¶“ç”±è³‡æºå›žæ”¶ç­’ï¼Œç›´æŽ¥åˆªé™¤æª”æ¡ˆ#
+ECHO    # 39ï¼Žé—œé–‰ SmartScreen ç¯©é¸å·¥å…·   #                                   #
+ECHO    # 30ï¼ŽWindows To Goå•Ÿç”¨æ‡‰ç”¨å•†åº—   # 40ï¼Žé—œæ©Ÿæ™‚å¼·åˆ¶é—œé–‰èƒŒæ™¯ç¨‹å¼ä¸ç­‰å¾…  #
+ECHO    # 16ï¼Žé—œé–‰è¨ˆåŠƒä»»å‹™éš±è—çš„è‡ªå‹•å•Ÿå‹•  # 41ï¼Žé—œé–‰ä¸å¿…è¦çš„è¦–è¦ºå‹•ç•«æ•ˆæžœ      #
+ECHO    # 17ï¼Žç§»é™¤å³éµé¸å–®Sky Drive Pro   # 42ï¼Žé—œé–‰è»Ÿé«”Jump List             #
+ECHO    # 18ï¼Žç¦æ­¢é‹è¡Œé›»è…¦è‡ªå‹•ç¶­è­·è¨ˆåŠƒ    # 43ï¼Žé—œé–‰é ç«¯å”åŠ©                  #
+ECHO    # 19ï¼Žå•Ÿç”¨.NET Framework 3.5.1    # 44ï¼Žæ›´æ”¹IEé è¨­ä¸‹è¼‰ä½ç½®            #
+ECHO    # 20ï¼Žé—œé–‰è»Ÿé«”ç›¸å®¹æ€§å°å¹«æ‰‹        # 45ï¼Žæ¸…ç†æ‡‰ç”¨å•†åº—å¿«å–              #
+ECHO    # 21ï¼Žç¦æ­¢ä¸Šç¶²æ‰“é–‹ç€è¦½å™¨å¿…æ‡‰      # 46ï¼Žå·¥ä½œåˆ—é¡¯ç¤ºã€Œæ˜ŸæœŸå¹¾ã€          #
+ECHO    # 22ï¼Žåˆªé™¤ã€Œæˆ‘çš„é›»è…¦ã€6å€‹è³‡æ–™å¤¾   # 47ï¼Žè¨­å®šç³»çµ±å…§å»ºæˆªåœ–å„²å­˜åˆ°æ¡Œé¢    #
+ECHO    # 23ï¼Žé¡¯ç¤ºå—ä¿è­·çš„ç³»çµ±æª”æ¡ˆ        # 48ï¼Žé—œé–‰ç£ç¢Ÿç¢Žç‰‡æ•´ç†è¨ˆåŠƒ          #
+ECHO    # 24ï¼Žæ¡Œé¢é¡¯ç¤ºã€Œæˆ‘çš„é›»è…¦ã€        # 49ï¼Žç¦ç”¨ç³»çµ±è¨˜éŒ„æª”èˆ‡å¯«å…¥åµéŒ¯è³‡è¨Š  #
+ECHO    # 25ï¼Žå•Ÿå‹•IEå¢žå¼·ä¿è­·æ¨¡å¼          # 50ï¼Žç¦ç”¨ç–‘é›£æŽ’è§£å’Œç³»çµ±è¨ºæ–·æœå‹™    #
 ECHO    #+++++++++++++++++++++++++++++++++#+++++++++++++++++++++++++++++++++++#
 ECHO =============================================================================
 
-set /p a2=.                  ½Ð¿é¤J¾Þ§@§Ç¸¹¨Ã«ö¤UEnter¡]¨Ò¦p07¡^¡G
+set /p a2=.                  è«‹è¼¸å…¥æ“ä½œåºè™Ÿä¸¦æŒ‰ä¸‹Enterï¼ˆä¾‹å¦‚07ï¼‰ï¼š
 if %a2%==01 goto lnk
 if %a2%==02 goto uacico
 if %a2%==03 goto IEENT
@@ -3087,16 +3008,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO        ¥h°£§Ö±¶¤è¦¡¤p½bÀY©M«áºó
+ECHO        åŽ»é™¤å¿«æ·æ–¹å¼å°ç®­é ­å’Œå¾Œç¶´
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto lnk1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto lnk2
 
@@ -3106,7 +3027,7 @@ reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer" /
 del "%userprofile%\AppData\Local\iconcache.db" /f /q
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3116,7 +3037,7 @@ reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer
 del "%userprofile%\AppData\Local\iconcache.db" /f /q
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3128,16 +3049,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO             ¥h°£UAC¤p¬ÞµP
+ECHO             åŽ»é™¤UACå°ç›¾ç‰Œ
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto uacico1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto uacico2
 
@@ -3146,7 +3067,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\S
 del "%userprofile%\AppData\Local\iconcache.db" /f /q
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3155,7 +3076,7 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explore
 del "%userprofile%\AppData\Local\iconcache.db" /f /q
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3167,16 +3088,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO            IE11¶}±Ò¥ø·~¼Ò¦¡
+ECHO            IE11é–‹å•Ÿä¼æ¥­æ¨¡å¼
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto IEENT1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto IEENT2
 
@@ -3186,7 +3107,7 @@ reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Internet Explorer\Main\En
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO ­«¶}¾÷¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO é‡é–‹æ©Ÿç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3194,7 +3115,7 @@ GOTO menu2
 reg delete "HKEY_CURRENT_USER\Software\Policies\Microsoft\Internet Explorer\Main\EnterpriseMode" /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO ­«¶}¾÷¥Í®Ä¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO é‡é–‹æ©Ÿç”Ÿæ•ˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3205,26 +3126,26 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO           ±Ò¥Î Administrator ±b¤á
+ECHO           å•Ÿç”¨ Administrator å¸³æˆ¶
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto admin1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto admin2
 
 :admin1
 CLS
-set /p adminusr1=½Ð¿é¤J±K½X¡G
-set /p adminusr2=½Ð¦A¦¸¿é¤J±K½X½T»{¡G
+set /p adminusr1=è«‹è¼¸å…¥å¯†ç¢¼ï¼š
+set /p adminusr2=è«‹å†æ¬¡è¼¸å…¥å¯†ç¢¼ç¢ºèªï¼š
 if %adminusr1%==%adminusr2% goto confirm2
-echo ¨â¦¸¿é¤Jªº±K½X¤£¤@­P
-echo «ö¤U¥ô·NÁäªð¦^­«·s¿é¤J
+echo å…©æ¬¡è¼¸å…¥çš„å¯†ç¢¼ä¸ä¸€è‡´
+echo æŒ‰ä¸‹ä»»æ„éµè¿”å›žé‡æ–°è¼¸å…¥
 pause>nul
 goto admin1
 
@@ -3234,7 +3155,7 @@ net user Administrator %adminusr1%
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v FilterAdministratorToken /d 1 /t REG_DWORD /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3243,7 +3164,7 @@ net user administrator /active:no
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v FilterAdministratorToken /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3255,41 +3176,41 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO    ÁôÂÃÀÉ®×Á`ºÞ¾ðª¬µ¡®æ¡B®a¥Î¸s²Õ©Mºô¸ô
+ECHO    éš±è—æª”æ¡ˆç¸½ç®¡æ¨¹ç‹€çª—æ ¼ã€å®¶ç”¨ç¾¤çµ„å’Œç¶²è·¯
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto HnetworkHG1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto HnetworkHG2
 
 :HnetworkHG1
 CLS
-ECHO »Ý­nTrustInstallerÅv­­
-ECHO ½Ð½T«O¤wÀò¨ú¸ÓÅv­­
-ECHO «ö¤U¥ô·NÁäÄ~Äò¾Þ§@
+ECHO éœ€è¦TrustInstalleræ¬Šé™
+ECHO è«‹ç¢ºä¿å·²ç²å–è©²æ¬Šé™
+ECHO æŒ‰ä¸‹ä»»æ„éµç¹¼çºŒæ“ä½œ
 pause>nul
 reg add "HKEY_CLASSES_ROOT\CLSID\{B4FB3F98-C1EA-428d-A78A-D1F5659CBA93}\ShellFolder" /v Attributes /d 2962489612 /t REG_DWORD /f
 reg add "HKEY_CLASSES_ROOT\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder" /v Attributes /d 2962489444 /t REG_DWORD /f
-ECHO ½Ð¥´¶}¥ô°ÈºÞ²z¾¹­«±ÒÀÉ®×Á`ºÞ
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO è«‹æ‰“é–‹ä»»å‹™ç®¡ç†å™¨é‡å•Ÿæª”æ¡ˆç¸½ç®¡
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
 :HnetworkHG2
-ECHO »Ý­nTrustInstallerÅv­­
-ECHO ½Ð½T«O¤wÀò¨ú¸ÓÅv­­
-ECHO «ö¤U¥ô·NÁäÄ~Äò¾Þ§@
+ECHO éœ€è¦TrustInstalleræ¬Šé™
+ECHO è«‹ç¢ºä¿å·²ç²å–è©²æ¬Šé™
+ECHO æŒ‰ä¸‹ä»»æ„éµç¹¼çºŒæ“ä½œ
 pause>nul
 reg add "HKEY_CLASSES_ROOT\CLSID\{B4FB3F98-C1EA-428d-A78A-D1F5659CBA93}\ShellFolder" /v Attributes /d 2961441036 /t REG_DWORD /f
 reg add "HKEY_CLASSES_ROOT\CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder" /v Attributes /d 2953052260 /t REG_DWORD /f
-ECHO ½Ð¥´¶}¥ô°ÈºÞ²z¾¹­«±ÒÀÉ®×Á`ºÞ
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO è«‹æ‰“é–‹ä»»å‹™ç®¡ç†å™¨é‡å•Ÿæª”æ¡ˆç¸½ç®¡
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3301,16 +3222,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO       ·Æ¹««ü¦V¥k¤W¨¤¤£Åã¥Ü5­Ó±`¥ÎÁä
+ECHO       æ»‘é¼ æŒ‡å‘å³ä¸Šè§’ä¸é¡¯ç¤º5å€‹å¸¸ç”¨éµ
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto charm1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto charm2
 
@@ -3320,7 +3241,7 @@ reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\EdgeUI" /v Disabl
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3329,7 +3250,7 @@ reg delete "HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\EdgeUI" /v Dis
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3341,16 +3262,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO        ¶}©l¿ï³æ¦Û°ÊÅã¥Ü"À³¥Î"ÀËµø
+ECHO        é–‹å§‹é¸å–®è‡ªå‹•é¡¯ç¤º"æ‡‰ç”¨"æª¢è¦–
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto allapp1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto allapp2
 
@@ -3360,7 +3281,7 @@ reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer" /v Show
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3369,7 +3290,7 @@ reg delete "HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer" /v S
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3381,16 +3302,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO        µn¤JÅã¥Ü®à­±¦Ó«D¶}©l¿ï³æ
+ECHO        ç™»å…¥é¡¯ç¤ºæ¡Œé¢è€Œéžé–‹å§‹é¸å–®
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto logonD1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto logonD2
 
@@ -3400,7 +3321,7 @@ reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer" /v GoTo
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3409,7 +3330,7 @@ reg delete "HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer" /v G
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3421,28 +3342,28 @@ ECHO.
 ECHO.
 ECHO    **************************************************
 ECHO.
-ECHO               Ãö³¬­«­n°T®§¤¤¤ß¦w¥þºûÅ@®ø®§´£¥Ü
+ECHO               é—œé–‰é‡è¦è¨Šæ¯ä¸­å¿ƒå®‰å…¨ç¶­è­·æ¶ˆæ¯æç¤º
 ECHO.
-ECHO       1¡DWindows Update          9¡DWindows ºÃÃø±Æ¸Ñ
+ECHO       1ï¼ŽWindows Update          9ï¼ŽWindows ç–‘é›£æŽ’è§£
 ECHO.
-ECHO       2¡D¶¡¿Ò³nÅé¤Î©U§£³nÅé«OÅ@ 10¡D¦Û°ÊºûÅ@
+ECHO       2ï¼Žé–“è«œè»Ÿé«”åŠåžƒåœ¾è»Ÿé«”ä¿è­· 10ï¼Žè‡ªå‹•ç¶­è­·
 ECHO.
-ECHO       3¡Dºô»Úºô¸ô¦w¥þ©Ê³]©w     11¡DHomeGroup
+ECHO       3ï¼Žç¶²éš›ç¶²è·¯å®‰å…¨æ€§è¨­å®š     11ï¼ŽHomeGroup
 ECHO.
-ECHO       4¡D¨Ï¥ÎªÌ±b¤á±±¨î(UAC)    12¡DºÏºÐ¾÷ª¬ºA
+ECHO       4ï¼Žä½¿ç”¨è€…å¸³æˆ¶æŽ§åˆ¶(UAC)    12ï¼Žç£ç¢Ÿæ©Ÿç‹€æ…‹
 ECHO.
-ECHO       5¡Dºô¸ô¨¾¤õÀð             13¡DÀÉ®×¾úµ{°O¿ý
+ECHO       5ï¼Žç¶²è·¯é˜²ç«ç‰†             13ï¼Žæª”æ¡ˆæ­·ç¨‹è¨˜éŒ„
 ECHO.
-ECHO       6¡D¯f¬r¨¾Å@               14¡D¸Ë¸m³nÅé
+ECHO       6ï¼Žç—…æ¯’é˜²è­·               14ï¼Žè£ç½®è»Ÿé«”
 ECHO.
-ECHO       7¡DÀx¦sªÅ¶¡               30¡D¤u§@¸ê®Æ§¨
+ECHO       7ï¼Žå„²å­˜ç©ºé–“               30ï¼Žå·¥ä½œè³‡æ–™å¤¾
 ECHO.
-ECHO       8¡DSmartScreen            16¡Dªð¦^¥D¿ï³æ
+ECHO       8ï¼ŽSmartScreen            16ï¼Žè¿”å›žä¸»é¸å–®
 ECHO.
 ECHO    **************************************************
 ECHO.
 ECHO.
-set /p ac=.            ½Ð¿é¤J¾Þ§@§Ç¸¹¨Ã«ö¤UEnter¡]¨Ò¦p3¡^¡G
+set /p ac=.            è«‹è¼¸å…¥æ“ä½œåºè™Ÿä¸¦æŒ‰ä¸‹Enterï¼ˆä¾‹å¦‚3ï¼‰ï¼š
 if %ac%==1 goto actioncenter1
 if %ac%==2 goto actioncenter2
 if %ac%==3 goto actioncenter3
@@ -3471,19 +3392,19 @@ ECHO    **********************************
 ECHO.
 ECHO             Windows Update
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c00000000020000000000106600000001000020000000a7ae8c9aa7ebe4742746b947752993893f926c5854829125b440977d5ee42ce5000000000e800000000200002000000019f8de4a9ee294910a8eb38395fd9a6bb95c9b9539f442f35a849b34959437f5d0000000816e8363d0d3a4ee18b296952d9a75e594bd8b0b70f7958b7ed114e2fc3a5e371cadb4a5a0d5d20a32f73106aa932dee2c77ad82b28e3a62034385ab0b282f60961ee50ac870ca46981ee4a5a57d0040bd3a3f940852f82951d4e08cb8eb0f61be0cc6b28efd6278ab5ad483d19ad2d65cd9fcdc8cdbadf618d2203a45575e407e961308a33f37ec30e504314a9526013c7690a204e8d77c17d6c9fccae82c308dd0070f0c9b237c1a849e8042632cd33f5f5b955c4c6fb5308cae6f76834f26c1a7ab2095037324618aabf8bbe5ffc440000000fce98e4305f7e85d4105e078edd7ca2ff76be6da04a03e476f8af4ca06354805e2bd69c105b43b19732253779f7d92616e5255f86cfc4833f4232770c74cfc10" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000001000000a000000000000000a39f57e10778cf01010000007b00450038003400330033004200370032002d0035003800340032002d0034006400340033002d0038003600340035002d004200430032004300330035003900360030003800330037007d002e006e006f00740069006600690063006100740069006f006e002e003100300033002e0035002d003400340038003800320036003800370000000000000000000000000000000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3495,21 +3416,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO         ¶¡¿Ò³nÅé¤Î©U§£³nÅé«OÅ@
+ECHO         é–“è«œè»Ÿé«”åŠåžƒåœ¾è»Ÿé«”ä¿è­·
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c000000000200000000001066000000010000200000001e9257367aee8da07d46c24072e826aa1c30f8803c5caca94939cfe119824f02000000000e800000000200002000000035f6e4f999b399b08d58ba843e45dbdff3b2442e92961fb86f8f7c8b16d5b8a4300000002456b2243feec6e4f1cfa2c744ed5cbfc0dd806986c4657031eaf479fbd32aca00f23a1a978df2e3c422adbf2d00b0e3400000008bb2c177465efd545edf842c16b8668f496fe449ab9a640deca042e87175f99fef354a54c6dc4fcb470241f973203775917e4831c22bcfee232673cd29d72736" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000000000000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3521,21 +3442,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO           ºô»Úºô¸ô¦w¥þ©Ê³]©w
+ECHO           ç¶²éš›ç¶²è·¯å®‰å…¨æ€§è¨­å®š
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c0000000002000000000010660000000100002000000095e01fab8e686e7732e278bd314cfaaf77fa829dc38c2bdd5d76e98563f5a538000000000e8000000002000020000000fb710f194ef621cfbe95be0d304325dac3ae84ec1c8cabb656e236800d3510af300000000b2c9c9e08bd50d6e30da1e85199ac3b8d6cb6ea024aa429b113982e135116eac3c282c812fd87e4b9edfa7fa22da4a04000000069d82238674bf2ac2089145733306252a4f62629ccfdb1e016b222b40ec6a517940208a9942f37d2a2288f87b8cab3fd47f2a8892ca2113a6eb5dec574fd3cb7" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000000000000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3547,21 +3468,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO            ¨Ï¥ÎªÌ±b¤á±±¨î(UAC)
+ECHO            ä½¿ç”¨è€…å¸³æˆ¶æŽ§åˆ¶(UAC)
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c0000000002000000000010660000000100002000000085b19b580389f6fe3b433fa4a0dca27cfba7ebe10c75063b0301d03f316fd6d8000000000e80000000020000200000003b1268f462df692609d30181fc1b1bf301feaea81062b2b8d85d0453da9e8b8e30000000cd0a948cf29ecdf35d317d26f81ecb379d987adb1ed174e2f75f70c689f830ea00fe3cf5fcfec9a14b6c32a6a9fb12b2400000003d8c500984a8fd0aea4ed4651d109c55120e89260b8c02f117ee5b2c5255395b10cbb139c40d09f728394f254297a3ce2f73cfe530a405e4afd22264d16df833" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000006900200055004900" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3573,21 +3494,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO              ºô¸ô¨¾¤õÀð
+ECHO              ç¶²è·¯é˜²ç«ç‰†
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c000000000200000000001066000000010000200000008ed73cb7d5922e58de1a7c681e336c27cb43f8b42b60a3148dd37289855494e0000000000e8000000002000020000000690226f5db59f646af3b56ec513ed574f28f7b10d6e1e393e6304351faea91a93000000086b9f35c5099fc9e68510b27bfe7e893999e84b16de9b79b04468708aa23e65ee61b7a4179455f426a0c446d5e5388344000000065e349a51dcd1290427e45e141f652c08c6230c574eea0e688231cd1ea6a1adb1858d21613c5266b0b547fc5b75bb310bba9a72893484d95ee8130f516993fc5" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000000000000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3599,21 +3520,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO               ¯f¬r¨¾Å@
+ECHO               ç—…æ¯’é˜²è­·
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c0000000002000000000010660000000100002000000031843580b428b9af9595e96916cbd0f19ea89fde30f69a411682020989314a96000000000e80000000020000200000003de0e0d59079c8bfbf9b5166e4a049d90909799c2f1f163f3cbb6c86d6c3320730000000a9e333647b93b8be971c064c8acbf513de72634e77e134f5c45d46b07899dd8dd8f59245fe0d46f10e05b5af70cc98bc40000000cd231d8f5af986e73f5ba3faab6cd22d3f9d8f329590a9d00cb4d07d31b9309ee838bd6d1a5a11b763ff87c6be3323deb8704b3d22d1a9555857f690d3b3bd67" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000000000000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3625,21 +3546,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO               Àx¦sªÅ¶¡
+ECHO               å„²å­˜ç©ºé–“
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c000000000200000000001066000000010000200000009fcc53bf42d26d1382ba21052cc6e95f72b4cabbd760958d16ae3ce1ae31b88b000000000e8000000002000020000000bf0937ab1a2925a3c24de07a57af2304b64510b250b9becb7224081e70259147300000002be056aa8b4885c1caf38512603a8737bdfc2ed8c02e558f92f60575322505cb96e4aa0339c9b498fe559847a30b2033400000009ce01ff385c1683e410a9037e790d4ab387a305f1765af79295cbe7a6505917589852416e58f203bb98704e9eedf4b287cb3c709719db1988b3a4369f16e7fdc" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000000000000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3653,19 +3574,19 @@ ECHO    **********************************
 ECHO.
 ECHO              SmartScreen
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c0000000002000000000010660000000100002000000028cd1e206f2cf507fcbc92e969a0d295fbfa3da5396168e5782b226a030bd355000000000e800000000200002000000046f960055533314629032033a5245ccb8396371e44b7ac1276851bef82b73c3cb000000095becf78ec7b3ee0bde645e90e012895b612050d7baedda7c559b313f1b63977c525bdace6328d30368ade6b45e2590faa8e431b8c9a850d5a39b4efc14a6d7d87e4eaac594ef84823cbde505ed26069b5381052f7906675095d77486849436811d857efee028fc30bd27629bcbbb0d8f5309f599c21d161aabf12d5f46d5489233ab45970978f0dad43055b70b24b1cc41c6361dd628c53c8965555ff68abedf23bb77663b459df2690f8bf57724ab94000000075f55efd57f1474a35cd3dcae355d2818d68c1077e14033f003a45269c38b181236bee8da2cb0be46b9b2895031fe7205322cce56e99f6a3e356c35af486c99a" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000001000000800000000000000026b7d6380778cf01010000007b00300038003800450038004400460042002d0032003400360034002d0034004300320031002d0042004100440032002d004600300041004100360044004200350044003400420043007d002e006e006f00740069006600690063006100740069006f006e002e003100000050f8d41200000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3677,21 +3598,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO           Windows ºÃÃø±Æ¸Ñ
+ECHO           Windows ç–‘é›£æŽ’è§£
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c00000000020000000000106600000001000020000000e695e8667c04dd0f4d08d923501f85fe8563b3827a4ba592c61939475fec2b91000000000e80000000020000200000006949e330402843c96ee8fda5544a1ac42f6a9bd6eb4cca4ef0e5012dc004004a300000003931c03b0fb4074feda7e861127b621a7d8567e74694b1fc31e414c0a64e43b94ca03c662ef5dd4f02b538fd45dff2fa400000008d4db41e4620392cf7547242b390e93f6cdb0c262e753e95907bfc0d6f5231c51e3cf90d0414eac90c266c48348d6ead8a5d58429a3d26c3c4cee1b456ad4d1d" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000000000000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3703,21 +3624,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO               ¦Û°ÊºûÅ@
+ECHO               è‡ªå‹•ç¶­è­·
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c00000000020000000000106600000001000020000000423224b166383a4d4e44448ba3acf9e8d76f48fb6bd75e7c231b26f60bef45a1000000000e8000000002000020000000e5519266fa33c0f487c7d6a941eba4567135aa00021ab0bd11f47747dadca4ec30000000f1fb6d84e093d6b301753ac41d267b1d7358cdf60cddfd503c474baff922763c82b469ac20e35e3e235bb2a27851ac8f4000000054f9af44b6227ea3d532441f6016cae024dc3d30ed3cbf5fe907b0251d66c01bc934d59b555eab44d3e74e9e19203fe8f542f9f4179d12244f8017f2381b8521" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000006900200055004900" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3731,19 +3652,19 @@ ECHO    **********************************
 ECHO.
 ECHO                HomeGroup
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c0000000002000000000010660000000100002000000099cdf3e35d5aa882686ec6f1ba04bc0caa08909ee0eb5d08c7e3c1d83f4433cb000000000e80000000020000200000002443ee5a1aa568ef9e81864f5a36b8bdd07d7f6527cf1efabbf4a12da9c29eab300000000c84bdba546d23384c2cd0d41b4497c4c497e7d224fe64c22e732d7cd213fabd5106a12869c0a4ea3117101c6cb1b926400000006530acca5e4fb32322986c5712acca13b2d09a9128cf96e6c28abb387211f02364e7380eecdd540576551e467a3594807f1b05862be34655f5ca5eaf2f61463a" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000000000000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3755,21 +3676,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO              ºÏºÐ¾÷ª¬ºA
+ECHO              ç£ç¢Ÿæ©Ÿç‹€æ…‹
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c000000000200000000001066000000010000200000006e652b9b5ec7b232b39b290ab11f455271fc65328547ed66c234afd43b7d94c4000000000e8000000002000020000000868691bf70dd349be3d3013fd10739b9abf7dc4ce1e660adff0a6303f003230f300000007fd6a05c4d3f4cd311f0f1278ba8f8ee0d7c1f40d3ac92b60292f73fe05a2ce9d3cdd7c4a2704d247f5236ac775527ed400000008b6fa60beed92722cc51f85b230d35f27b8d727be389e9536be3af372d28166c8688e42116d5de5b5b0b1c0fd7bc17c5d6e775f27c894b535886172eb36d2c97" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000000000000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3781,21 +3702,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO             ÀÉ®×¾úµ{°O¿ý
+ECHO             æª”æ¡ˆæ­·ç¨‹è¨˜éŒ„
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c0000000002000000000010660000000100002000000025562ebd3620e30eaa8d457a1b50728391c026a3827cc98c5419d54b66f88a62000000000e8000000002000020000000431cb93d711ce24c4030972f3ebf4ed20f4bb493014349647768cf493057799b30000000531d8d6644f48d3bed8e9f259fe21f2143de08c9177c87f162171f8cb55007e1020011c183501bb78851de4462ff7b44400000006f8228ca663f124cd6e066c96d287188982829b53f046f2b7ce5d39d2092a6b7f343046f2022308453d02730a03f6a19e25520884893451b7d52460f04974370" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000006900200055004900" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3807,21 +3728,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO               ¸Ë¸m³nÅé
+ECHO               è£ç½®è»Ÿé«”
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c000000000200000000001066000000010000200000005deacb32849d483088eeddb48bb3f83ef11e8790bd2f58305745ce7c633c84df000000000e8000000002000020000000288aad23ccf0b6078c8e4048b2f95952df4e93f8b10326f8653b2df2df8493463000000048ae2fc754b39bb862c55a1f866dc36e9a26fb30a37f89f7c5fdc370ddc3688d99e5d652367e6c26df3b6e74ae930a75400000000cbaf6edc265ed46816083afc7c7420d5a5348f74d0677fd329ec0693033bdcfe182960beb2f60f286a145888552cbae7ed2b9483994c42e057463d884e0351d" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000000000000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3833,21 +3754,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO               ¤u§@¸ê®Æ§¨
+ECHO               å·¥ä½œè³‡æ–™å¤¾
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "01000000d08c9ddf0130d1118c7a00c04fc297eb010000006049bbbf6216294aa2953641ffc9302c000000000200000000001066000000010000200000003073ab5723ff839facc6ee929c9336c9ab236cf4ad09dc07678eeac8505be012000000000e80000000020000200000008b2ae9609c87ac04361a911adb451101d23de4cbd2614c78cf8714d7dda546cb3000000053c36193ede228b4775ceba48be0d2b2da6bd258d3d0652de6613d9877bb47a74d981a0412a7830a300db6409e0cd2b640000000548d75a77900aead0943e8f1742fe0f273c51a677269e66df1439e880cedbd6e7ee8a310dafd23729c9d20b71feed70968101c37aa421f8f4d073dc03bf0b565" /t REG_BINARY /f
 If ErrorLevel 2 If Not ErrorLevel 3 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Action Center\Checks\%acguid%" /v CheckSetting /d "23004100430042006c006f00620000000000000000000000010000000000000000000000" /t REG_BINARY /f
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO «ö¤U¥ô·NÁäªð¦^
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3856,7 +3777,7 @@ CLS
 COLOR 0a
 MODE con: COLS=30 LINES=5
 echo.
-echo ¿é¤J¦³»~¡A«ö¤U¥ô·NÁäªð¦^
+echo è¼¸å…¥æœ‰èª¤ï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›ž
 pause>nul
 GOTO actioncenter
 
@@ -3867,27 +3788,27 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO               Âê©wIE¥D­¶
+ECHO               éŽ–å®šIEä¸»é 
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto StartPage1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto StartPage2
 
 :StartPage1
-set /p StartPage=½Ð¿é¤J­n¸j©wªºIE¥D­¶ºô§}¡G
+set /p StartPage=è«‹è¼¸å…¥è¦ç¶å®šçš„IEä¸»é ç¶²å€ï¼š
 reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Internet Explorer\Control Panel" /v "HomePage" /d "1" /t REG_DWORD /f
 reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Internet Explorer\Main" /v "Start Page" /d "%StartPage%" /t REG_SZ /f
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO ¾Þ§@§¹¦¨¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æ“ä½œå®Œæˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3897,7 +3818,7 @@ reg delete "HKEY_CURRENT_USER\Software\Policies\Microsoft\Internet Explorer\Main
 gpupdate /force
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
-ECHO ¾Þ§@§¹¦¨¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æ“ä½œå®Œæˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3908,16 +3829,16 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO     ¥´¶}IE½Ð¤Å°lÂÜ¥\¯à(Do Not Track)
+ECHO     æ‰“é–‹IEè«‹å‹¿è¿½è¹¤åŠŸèƒ½(Do Not Track)
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
-ECHO                2¡DÁÙ­ì
+ECHO                2ï¼Žé‚„åŽŸ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡B2¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ã€2ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto DoNotTrack1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto DoNotTrack2
 
@@ -3926,7 +3847,7 @@ reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" /v "DoNotT
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
 taskkill /f /im iexplore.exe
-ECHO ¾Þ§@§¹¦¨¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æ“ä½œå®Œæˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3935,7 +3856,7 @@ reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" /v "DoNotT
 taskkill /f /im explorer.exe
 start %systemroot%\explorer
 taskkill /f /im iexplore.exe
-ECHO ¾Þ§@§¹¦¨¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æ“ä½œå®Œæˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -3946,21 +3867,21 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO              ²M°£¨t²Î©U§£
+ECHO              æ¸…é™¤ç³»çµ±åžƒåœ¾
 ECHO.
-ECHO                1¡D°õ¦æ
+ECHO                1ï¼ŽåŸ·è¡Œ
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 12 /N /M ¿ï¾Ü¡]1¡^¡G
+Choice /C 12 /N /M é¸æ“‡ï¼ˆ1ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto win1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto win2
 
 :win1
-echo «ö¤U¥ô·NÁäÄ~Äò¾Þ§@
+echo æŒ‰ä¸‹ä»»æ„éµç¹¼çºŒæ“ä½œ
 pause>nul
-echo ¥¿¦b²M°£¨t²Î©U§£¤å¥ó¡A½Ðµyµ¥... 
+echo æ­£åœ¨æ¸…é™¤ç³»çµ±åžƒåœ¾æ–‡ä»¶ï¼Œè«‹ç¨ç­‰... 
 del /f /s /q %systemdrive%\*.sqm
 del /f /s /q %systemdrive%\*.tmp 
 del /f /s /q %systemdrive%\*._mp 
@@ -3976,7 +3897,7 @@ del /f /q %userprofile%\recent\*.*
 del /f /s /q "%userprofile%\Local Settings\Temporary Internet Files\*.*" 
 del /f /s /q "%userprofile%\Local Settings\Temp\*.*" 
 del /f /s /q "%userprofile%\recent\*.*" 
-DEL /S /F /Q "%AllUsersProfile%\¡u¶}©l¡v¥\¯àªí\µ{¦¡¶°\Windows Messenger.lnk"
+DEL /S /F /Q "%AllUsersProfile%\ã€Œé–‹å§‹ã€åŠŸèƒ½è¡¨\ç¨‹å¼é›†\Windows Messenger.lnk"
 RD /S /Q %windir%\temp & md %windir%\temp
 RD /S /Q "%userprofile%\Local Settings\Temp"
 MD "%userprofile%\Local Settings\Temp"
@@ -3984,17 +3905,17 @@ RD /S /Q "%systemdrive%\Program Files\Temp"
 MD "%systemdrive%\Program Files\Temp"
 RD /S /Q "%systemdrive%\d"
 net user aspnet /delete
-echo ²M°£¨t²Î©U§£ÀÉ®×§¹¦¨¡I
-echo §Ö³t°õ¦æ²M²zºÏºÐ¡I
+echo æ¸…é™¤ç³»çµ±åžƒåœ¾æª”æ¡ˆå®Œæˆï¼
+echo å¿«é€ŸåŸ·è¡Œæ¸…ç†ç£ç¢Ÿï¼
 cleanmgr /SAGERUN:99
-WSReset.exe
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :win2
-ECHO ¦¹²M²z¤£¯àÁÙ­ìªü*-*
-ECHO «ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æ­¤æ¸…ç†ä¸èƒ½é‚„åŽŸé˜¿*-*
+ECHO æŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -4005,42 +3926,42 @@ ECHO.
 ECHO.
 ECHO    **********************************
 ECHO.
-ECHO                ºô¸ôÀË¬d¤u¨ã
+ECHO                ç¶²è·¯æª¢æŸ¥å·¥å…·
 ECHO.
-ECHO                1¡DPING´ú¸Õ
+ECHO                1ï¼ŽPINGæ¸¬è©¦
 ECHO.
-ECHO                2¡D¬d¸ô¥Ñ
+ECHO                2ï¼ŽæŸ¥è·¯ç”±
 ECHO.
-ECHO                3¡D¬dIP»Pºô¸ô¥d¸ê°T
+ECHO                3ï¼ŽæŸ¥IPèˆ‡ç¶²è·¯å¡è³‡è¨Š
 ECHO.
 ECHO    **********************************
 ECHO.
 ECHO.
-Choice /C 123 /N /M ¿ï¾Ü¡]1¡B2¡B3¡^¡G
+Choice /C 123 /N /M é¸æ“‡ï¼ˆ1ã€2ã€3ï¼‰ï¼š
 If ErrorLevel 1 If Not ErrorLevel 2 Goto ping1
 If ErrorLevel 2 If Not ErrorLevel 3 Goto ping2
 If ErrorLevel 3 If Not ErrorLevel 4 Goto ping3
 
 :ping1
 MODE con: COLS=40 LINES=150
-set /p var=¿é¤J§A­n¬dªºIP©Î¬Oºô§}:
+set /p var=è¼¸å…¥ä½ è¦æŸ¥çš„IPæˆ–æ˜¯ç¶²å€:
 ping %var%
-ECHO ¬d¸ß§¹¦¨¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŸ¥è©¢å®Œæˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :ping2
 MODE con: COLS=40 LINES=150
-set /p var=¿é¤J§A­n¬dªºIP©Î¬Oºô§}:
+set /p var=è¼¸å…¥ä½ è¦æŸ¥çš„IPæˆ–æ˜¯ç¶²å€:
 tracert %var%
-ECHO ¬d¸ß§¹¦¨¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŸ¥è©¢å®Œæˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
 :ping3
 MODE con: COLS=150 LINES=150
 ipconfig /all
-ECHO ¬d¸ß§¹¦¨¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+ECHO æŸ¥è©¢å®Œæˆï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -4048,9 +3969,9 @@ GOTO menu
 CLS
 COLOR 0a
 MODE con: COLS=150 LINES=150
-ECHO ¾Þ§@¥¢±Ñ¡C
-echo ½Ð¥Î·Æ¹«¥kÁäÂIÀ»¡i¥H¨t²ÎºÞ²z­û¨­¤À°õ¦æ¡j
-ECHO «ö¤U¥ô·NÁäÂ÷¶}...
+ECHO æ“ä½œå¤±æ•—ã€‚
+echo è«‹ç”¨æ»‘é¼ å³éµé»žæ“Šã€ä»¥ç³»çµ±ç®¡ç†å“¡èº«åˆ†åŸ·è¡Œã€‘
+ECHO æŒ‰ä¸‹ä»»æ„éµé›¢é–‹...
 PAUSE >nul
 exit
 
@@ -4059,7 +3980,7 @@ CLS
 COLOR 0a
 MODE con: COLS=150 LINES=150
 echo.
-echo ¿é¤J¦³»~¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo è¼¸å…¥æœ‰èª¤ï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
 
@@ -4068,7 +3989,7 @@ CLS
 COLOR 0a
 MODE con: COLS=30 LINES=15
 echo.
-echo ¿é¤J¦³»~¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo è¼¸å…¥æœ‰èª¤ï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu2
 
@@ -4077,6 +3998,6 @@ CLS
 COLOR 0a
 MODE con: COLS=30 LINES=5
 echo.
-echo ¾Þ§@¥¢±Ñ¡A«ö¤U¥ô·NÁäªð¦^¥D¿ï³æ
+echo æ“ä½œå¤±æ•—ï¼ŒæŒ‰ä¸‹ä»»æ„éµè¿”å›žä¸»é¸å–®
 pause>nul
 GOTO menu
